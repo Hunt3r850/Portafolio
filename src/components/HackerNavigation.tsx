@@ -52,9 +52,9 @@ const HackerNavigation: React.FC = () => {
             {/* Logo/Brand */}
             <div className="flex items-center space-x-3">
               <img 
-                src="/ahbyte-logo.png" 
+                src="/ahmed-hacker-profile.png" 
                 alt="AHByte Logo" 
-                className="w-10 h-10 rounded-lg border border-cyan-400/50 shadow-lg shadow-cyan-400/20"
+                className="w-10 h-10 rounded-lg border border-cyan-400/50 shadow-lg shadow-cyan-400/20 hover:shadow-green-400/30 transition-all duration-300"
               />
               <div className="text-green-400 font-mono text-lg">
                 <span className="text-cyan-400">root@</span>

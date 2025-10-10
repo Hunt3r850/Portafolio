@@ -85,8 +85,8 @@ const HackerHeroSection: React.FC = () => {
         {/* Profile Image with Hexagonal Frame */}
         <div className="hex-container mb-8">
           <img
-            src="/ahbyte-logo.png"
-            alt="AHByte Logo"
+            src="/ahmed-hacker-profile.png"
+            alt="Ahmed Hacker Profile"
             className="hex-image"
           />
           <div className="absolute inset-0 bg-green-400/20 animate-pulse rounded-full blur-xl"></div>
