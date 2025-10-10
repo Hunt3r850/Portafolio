@@ -1,52 +1,69 @@
 import React from 'react';
-import Navigation from '@/components/Navigation';
-import ParticleBackground from '@/components/ParticleBackground';
-import HeroSection from '@/components/HeroSection';
+import HackerNavigation from '@/components/HackerNavigation';
+import MatrixBackground from '@/components/MatrixBackground';
+import HackerHeroSection from '@/components/HackerHeroSection';
 import AboutSection from '@/components/AboutSection';
-import ExperienceTimeline from '@/components/ExperienceTimeline';
-import PortfolioSection from '@/components/PortfolioSection';
-import BlogSection from '@/components/BlogSection';
+import ExperienceSection from '@/components/ExperienceSection';
+import EducationSection from '@/components/EducationSection';
 import ContactSection from '@/components/ContactSection';
+import { LanguageProvider } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
+import '@/styles/hacker-theme.css';
 
-import ScrollProgress from '@/components/ScrollProgress';
-
-const Index = () => {
+const IndexContent = () => {
+  const { t } = useLanguage();
+  
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-black text-green-400 overflow-x-hidden font-mono">
       {/* Background Elements */}
-      <ParticleBackground />
-      <ScrollProgress />
+      <MatrixBackground />
       
       {/* Navigation */}
-      <Navigation />
+      <HackerNavigation />
       
       {/* Main Content */}
       <main className="relative z-10">
-        <HeroSection />
+        <HackerHeroSection />
         <AboutSection />
-        <ExperienceTimeline />
-        <PortfolioSection />
-        <BlogSection />
+        <ExperienceSection />
+        <EducationSection />
         <ContactSection />
       </main>
       
       {/* Footer */}
-      <footer id="footer" className="bg-primary text-primary-foreground py-12">
-        <div className="container mx-auto px-6 text-center">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-2xl font-serif font-bold">
-              Portfolio
+      <footer id="footer" className="terminal-window mx-4 mb-4">
+        <div className="terminal-header">
+          <div className="terminal-dots">
+            <div className="terminal-dot red"></div>
+            <div className="terminal-dot yellow"></div>
+            <div className="terminal-dot green"></div>
+          </div>
+          <div className="terminal-title">system_info.log</div>
+        </div>
+        <div className="terminal-content">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+            <div className="neon-text font-futuristic text-lg">
+              {t('hero.name')}
             </div>
-            <p className="text-primary-foreground/80">
-              © 2024 Portfolio. Crafted with passion and purpose.
+            <p className="text-green-300">
+              {t('footer.copyright')}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth">
-                Privacy
+              <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                {t('footer.privacy')}
               </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-smooth">
-                Terms
+              <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                {t('footer.terms')}
               </a>
+            </div>
+          </div>
+          <div className="mt-4 pt-4 border-t border-green-400/30 text-xs text-center">
+            <div className="ascii-art">
+{`
+╔══════════════════════════════════════════════════════════════╗
+║  [SYSTEM STATUS: ONLINE] [SECURITY: MAXIMUM] [ACCESS: ROOT]  ║
+╚══════════════════════════════════════════════════════════════╝
+`}
             </div>
           </div>
         </div>
@@ -55,4 +72,13 @@ const Index = () => {
   );
 };
 
+const Index = () => {
+  return (
+    <LanguageProvider>
+      <IndexContent />
+    </LanguageProvider>
+  );
+};
+
 export default Index;
+

@@ -1,0 +1,181 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "Chi Sono",
+    "experience": "Esperienza",
+    "skills": "Competenze",
+    "education": "Formazione",
+    "contact": "Contatto"
+  },
+  "hero": {
+    "name": "Ahmed Odlanier Alfonso Garcia",
+    "title": "Laurea in Matematica-Informatica",
+    "role": "Laurea in Matematica-Informatica",
+    "subtitle": "Specialista in Cybersicurezza e Amministrazione di Rete",
+    "description": "Informatico con vasta esperienza nel settore tecnologico dal 2007, specializzato in audit, amministrazione di reti e sistemi, e cybersicurezza.",
+    "contactButton": "Contatto",
+    "downloadCV": "Scarica CV"
+  },
+  "about": {
+    "heading": "Chi Sono",
+    "content": "Professionista informatico con competenze diverse ed esperienza nel settore tecnologico, attivo nell'IT dal 2007. La mia carriera è stata caratterizzata dalla diversità, dall'insegnamento dell'informatica nella scuola elementare alla conduzione di audit, amministrazione di reti e sistemi, garantendo l'infrastruttura tecnologica necessaria per il successo organizzativo.",
+    "yearsExperience": "Anni di Esperienza",
+    "projectsCompleted": "Progetti Completati",
+    "certifications": "Certificazioni"
+  },
+  "experience": {
+    "heading": "Esperienza Professionale",
+    "jobs": [
+      {
+        "title": "Agente di Smistamento e Trasporto",
+        "company": "Airline Assistance Schweiz AG",
+        "location": "Zurigo, Svizzera",
+        "period": "2025",
+        "description": "Trasporto bagagli, protezione lavoratori sul lato aereo ZRH, sicurezza ZRH, costruzione ZRH."
+      },
+      {
+        "title": "Operaio Edile",
+        "company": "Azienda di Costruzioni",
+        "location": "Svizzera",
+        "period": "2020 – 2021",
+        "description": "Lavoro su progetti di costruzione e sviluppo infrastrutturale."
+      },
+      {
+        "title": "Amministratore di Rete",
+        "company": "Azienda di Ispezione Tecnica",
+        "location": "L'Avana, Cuba",
+        "period": "2014 – 2019",
+        "description": "Gestione, ottimizzazione di reti e sistemi aziendali. Implementazione di misure di sicurezza informatica. Miglioramento e aumento dell'efficienza operativa."
+      },
+      {
+        "title": "Specialista in Sicurezza Informatica",
+        "company": "Istituto di Medicina Veterinaria",
+        "location": "L'Avana, Cuba",
+        "period": "2013 – 2014",
+        "description": "Conduzione di audit e valutazioni di cybersicurezza. Identificazione e mitigazione di vulnerabilità nei sistemi informativi. Rafforzamento delle misure di protezione."
+      },
+      {
+        "title": "Perito Informatico",
+        "company": "SEPSA",
+        "location": "L'Avana, Cuba",
+        "period": "2010-2012",
+        "description": "Lavoro come perito informatico, preparazione di perizie e testimonianze in processi giudiziari."
+      },
+      {
+        "title": "Revisore Aggiunto per l'Informatica",
+        "company": "Ministero dei Trasporti",
+        "location": "L'Avana, Cuba",
+        "period": "2007-2010",
+        "description": "Conduzione di audit di sicurezza IT per organizzazioni, identificazione di vulnerabilità critiche e fornitura di soluzioni."
+      },
+      {
+        "title": "Maestra di Scuola Elementare",
+        "company": "Scuola Juan Gualberto Gómez",
+        "location": "L'Avana, Cuba",
+        "period": "2001 – 2007",
+        "description": "Implementazione di programmi educativi innovativi che hanno integrato la tecnologia nell'insegnamento, risultando in un aumento del 20% nella competenza digitale degli studenti."
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Competenze",
+    "technicalSkills": "Competenze Tecniche",
+    "softSkills": "Competenze Trasversali",
+    "technical": [
+      "Amministrazione di Rete",
+      "Tecniche di Hacking Etico",
+      "Audit Contabile-Finanziario",
+      "Implementazione di Politiche",
+      "Elaborazione Multimediale",
+      "Cybersicurezza",
+      "Amministrazione di Sistemi",
+      "Microsoft SQL Server",
+      "Exchange Server",
+      "Active Directory",
+      "Windows Server"
+    ],
+    "soft": [
+      "Impegno",
+      "Responsabilità",
+      "Lavoro di Squadra",
+      "Efficienza",
+      "Integrità",
+      "Dedizione",
+      "Leadership",
+      "Comunicazione"
+    ]
+  },
+  "education": {
+    "heading": "Formazione e Certificazioni",
+    "education": [
+      {
+        "title": "Hacking Etico",
+        "institution": "MasterD",
+        "location": "Saragozza, Spagna",
+        "period": "2023 – 2025",
+        "type": "Certificazione"
+      },
+      {
+        "title": "Scrum Foundation Learner",
+        "institution": "Certiprof",
+        "location": "Online",
+        "period": "2025",
+        "type": "Certificazione"
+      },
+      {
+        "title": "AWS Cloud Quest: Cloud Practitioner",
+        "institution": "Amazon Web Services",
+        "location": "Online",
+        "period": "2025",
+        "type": "Certificazione"
+      },
+      {
+        "title": "Google: Intelligenza Artificiale e Produttività",
+        "institution": "Academy Santander",
+        "location": "Online",
+        "period": "2025",
+        "type": "Corso"
+      },
+      {
+        "title": "Laurea in Matematica-Informatica",
+    "role": "Laurea in Matematica-Informatica",
+        "institution": "Instituto Superior Enrique José Varona",
+        "location": "L'Avana, Cuba",
+        "period": "2002 - 2007",
+        "type": "Titolo Universitario"
+      }
+    ]
+  },
+  "languages": {
+    "heading": "Lingue",
+    "list": [
+      {"language": "Spagnolo", "level": "Madrelingua"},
+      {"language": "Inglese", "level": "Intermedio (B2)"},
+      {"language": "Italiano", "level": "Intermedio (B2)"},
+      {"language": "Tedesco", "level": "Base"}
+    ]
+  },
+  "contact": {
+    "heading": "Contatto",
+    "subtitle": "Pronti a lavorare insieme?",
+    "description": "Sono disponibile per nuove opportunità e collaborazioni. Non esitate a contattarmi.",
+    "phone": "+41 782 558 402",
+    "email": "aalfonso850@yahoo.com",
+    "location": "Winterthur, Svizzera",
+    "linkedin": "Ahmed-Alfonso-Garcia",
+    "sendMessage": "Invia Messaggio",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "send": "Invia"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Ahmed Alfonso Garcia. Realizzato con passione e scopo.",
+    "privacy": "Privacy",
+    "terms": "Termini"
+  }
+}
+

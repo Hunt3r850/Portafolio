@@ -1,0 +1,181 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Ahmed Odlanier Alfonso Garcia",
+    "title": "Bachelor's Degree in Mathematics-Computer Science",
+    "role": "Bachelor's Degree in Mathematics-Computer Science",
+    "subtitle": "Cybersecurity and Network Administration Specialist",
+    "description": "Computer scientist with extensive experience in the technology sector since 2007, specialized in audits, network and systems administration, and cybersecurity.",
+    "contactButton": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "heading": "About Me",
+    "content": "Computer professional with diverse skills and experience in the technology sector, active in IT since 2007. My career has been marked by diversity, from teaching computer science in elementary school to conducting audits, network and systems administration, ensuring the technological infrastructure necessary for organizational success.",
+    "yearsExperience": "Years of Experience",
+    "projectsCompleted": "Projects Completed",
+    "certifications": "Certifications"
+  },
+  "experience": {
+    "heading": "Professional Experience",
+    "jobs": [
+      {
+        "title": "Sorting and Transport Agent",
+        "company": "Airline Assistance Schweiz AG",
+        "location": "Zürich, Switzerland",
+        "period": "2025",
+        "description": "Baggage transport, worker protection on ZRH airside, ZRH security, ZRH construction."
+      },
+      {
+        "title": "Construction Worker",
+        "company": "Construction Company",
+        "location": "Switzerland",
+        "period": "2020 – 2021",
+        "description": "Work on construction projects and infrastructure development."
+      },
+      {
+        "title": "Network Administrator",
+        "company": "Technical Inspection Company",
+        "location": "Havana, Cuba",
+        "period": "2014 – 2019",
+        "description": "Management, optimization of networks and business systems. Implementation of computer security measures. Improvement and increase of operational efficiency."
+      },
+      {
+        "title": "Computer Security Specialist",
+        "company": "Institute of Veterinary Medicine",
+        "location": "Havana, Cuba",
+        "period": "2013 – 2014",
+        "description": "Conducting cybersecurity audits and assessments. Identification and mitigation of vulnerabilities in information systems. Strengthening protection measures."
+      },
+      {
+        "title": "Computer Expert Detective",
+        "company": "SEPSA",
+        "location": "Havana, Cuba",
+        "period": "2010-2012",
+        "description": "Work as computer expert, preparation of expert reports and testimonies in judicial processes."
+      },
+      {
+        "title": "Deputy IT Auditor",
+        "company": "Ministry of Transport",
+        "location": "Havana, Cuba",
+        "period": "2007-2010",
+        "description": "Conducting IT security audits for organizations, identifying critical vulnerabilities and providing solutions."
+      },
+      {
+        "title": "Elementary School Teacher",
+        "company": "Juan Gualberto Gómez School",
+        "location": "Havana, Cuba",
+        "period": "2001 – 2007",
+        "description": "Implementation of innovative educational programs that integrated technology into teaching, resulting in a 20% increase in students' digital competence."
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Skills",
+    "technicalSkills": "Technical Skills",
+    "softSkills": "Soft Skills",
+    "technical": [
+      "Network Administration",
+      "Ethical Hacking Techniques",
+      "Accounting-Financial Auditing",
+      "Policy Implementation",
+      "Multimedia Processing",
+      "Cybersecurity",
+      "Systems Administration",
+      "Microsoft SQL Server",
+      "Exchange Server",
+      "Active Directory",
+      "Windows Server"
+    ],
+    "soft": [
+      "Commitment",
+      "Responsibility",
+      "Teamwork",
+      "Efficiency",
+      "Integrity",
+      "Dedication",
+      "Leadership",
+      "Communication"
+    ]
+  },
+  "education": {
+    "heading": "Education and Certifications",
+    "education": [
+      {
+        "title": "Ethical Hacking",
+        "institution": "MasterD",
+        "location": "Zaragoza, Spain",
+        "period": "2023 – 2025",
+        "type": "Certification"
+      },
+      {
+        "title": "Scrum Foundation Learner",
+        "institution": "Certiprof",
+        "location": "Online",
+        "period": "2025",
+        "type": "Certification"
+      },
+      {
+        "title": "AWS Cloud Quest: Cloud Practitioner",
+        "institution": "Amazon Web Services",
+        "location": "Online",
+        "period": "2025",
+        "type": "Certification"
+      },
+      {
+        "title": "Google: Artificial Intelligence and Productivity",
+        "institution": "Academy Santander",
+        "location": "Online",
+        "period": "2025",
+        "type": "Course"
+      },
+      {
+        "title": "Bachelor's Degree in Mathematics-Computer Science",
+    "role": "Bachelor's Degree in Mathematics-Computer Science",
+        "institution": "Instituto Superior Enrique José Varona",
+        "location": "Havana, Cuba",
+        "period": "2002 - 2007",
+        "type": "University Degree"
+      }
+    ]
+  },
+  "languages": {
+    "heading": "Languages",
+    "list": [
+      {"language": "Spanish", "level": "Native"},
+      {"language": "English", "level": "Intermediate (B2)"},
+      {"language": "Italian", "level": "Intermediate (B2)"},
+      {"language": "German", "level": "Basic"}
+    ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "subtitle": "Ready to work together?",
+    "description": "I'm available for new opportunities and collaborations. Feel free to reach out.",
+    "phone": "+41 782 558 402",
+    "email": "aalfonso850@yahoo.com",
+    "location": "Winterthur, Switzerland",
+    "linkedin": "Ahmed-Alfonso-Garcia",
+    "sendMessage": "Send Message",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Ahmed Alfonso Garcia. Crafted with passion and purpose.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}
+

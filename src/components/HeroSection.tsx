@@ -1,18 +1,42 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faDownload, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import professionalHeadshot from '@/assets/professional-headshot.webp';
-import { socialLinks } from '@/constants/socialLinks';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
-  const scrollToPortfolio = () => {
-    document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' });
+  const { t } = useLanguage();
+
+  const scrollToAbout = () => {
+    document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToContact = () => {
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const socialLinks = [
+    {
+      href: `mailto:${t('contact.email')}`,
+      icon: faEnvelope,
+      label: 'Email',
+      type: 'external'
+    },
+    {
+      href: `tel:${t('contact.phone')}`,
+      icon: faPhone,
+      label: 'Phone',
+      type: 'external'
+    },
+    {
+      href: `https://linkedin.com/in/${t('contact.linkedin')}`,
+      icon: faLinkedin,
+      label: 'LinkedIn',
+      type: 'external'
+    }
+  ];
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden py-24 sm:py-24 md:py-28 lg:py-0">
@@ -25,39 +49,41 @@ const HeroSection = () => {
           {/* Content */}
           <div className="flex-1 text-center lg:text-left animate-slide-up">
             <div className="mb-6">
-              <h1 className="text-5xl lg:text-7xl font-serif font-bold mb-4">
+              <h1 className="text-4xl lg:text-6xl font-serif font-bold mb-4">
                 <span className="text-slate-800 dark:text-slate-100">
-                  Your Name 
+                  {t('hero.name')}
                 </span>               
               </h1>
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold mb-4">
-                <span className="text-slate-600 dark:text-slate-300">UI/UX Designer</span>
+              <h2 className="text-2xl lg:text-3xl font-serif font-bold mb-4">
+                <span className="text-slate-600 dark:text-slate-300">{t('hero.title')}</span>
               </h2>
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl">
-                Crafting beautiful, user-centred digital experiences that blend aesthetic elegance
-                with intuitive functionality.
+              <h3 className="text-xl lg:text-2xl font-medium mb-6 text-accent">
+                {t('hero.subtitle')}
+              </h3>
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8 max-w-3xl">
+                {t('hero.description')}
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
-
               <Button
                 variant="hero"
-                size="lg"
-                onClick={scrollToPortfolio}
-                className="text-lg px-8 py-6"
-              >
-                View My Work
-                <FontAwesomeIcon icon={faArrowDown} className="h-5 w-5 ml-2" />
-              </Button>
-              <Button
-                variant="elegant"
                 size="lg"
                 onClick={scrollToContact}
                 className="text-lg px-8 py-6"
               >
-                Let's Connect
+                {t('hero.contactButton')}
+                <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5 ml-2" />
+              </Button>
+              <Button
+                variant="elegant"
+                size="lg"
+                onClick={scrollToAbout}
+                className="text-lg px-8 py-6"
+              >
+                {t('navigation.about')}
+                <FontAwesomeIcon icon={faArrowDown} className="h-5 w-5 ml-2" />
               </Button>
             </div>
 
@@ -96,7 +122,7 @@ const HeroSection = () => {
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant hover:shadow-glow transition-smooth animate-pulse-glow">
                 <img
                   src={professionalHeadshot}
-                  alt="Professional headshot"
+                  alt={t('hero.name')}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -110,7 +136,7 @@ const HeroSection = () => {
         <Button
           variant="ghost"
           size="icon"
-          onClick={scrollToPortfolio}
+          onClick={scrollToAbout}
           className="rounded-full"
         >
           <FontAwesomeIcon icon={faArrowDown} className="h-5 w-5" />
@@ -121,3 +147,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

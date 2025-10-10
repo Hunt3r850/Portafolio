@@ -5,6 +5,8 @@ import { jsxLocPlugin } from '@builder.io/vite-plugin-jsx-loc';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: '/Portafolio/',
+
   server: {
     host: "::",
     port: 8080,

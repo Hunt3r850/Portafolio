@@ -2,18 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { t } = useLanguage();
 
   const navItems = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#experiences', label: 'Experiences' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#home', label: t('navigation.home') },
+    { href: '#about', label: t('navigation.about') },
+    { href: '#experience', label: t('navigation.experience') },
+    { href: '#skills', label: t('navigation.skills') },
+    { href: '#education', label: t('navigation.education') },
+    { href: '#contact', label: t('navigation.contact') },
   ];
 
   useEffect(() => {
@@ -38,7 +43,7 @@ const Navigation = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navItems]);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -55,7 +60,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] md:w-auto max-w-5xl transition-smooth duration-300
+      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] md:w-auto max-w-6xl transition-smooth duration-300
         ${isScrolled ? 'opacity-100 translate-y-0 bg-background/90 backdrop-blur-md shadow-elegant border border-border rounded-lg md:rounded-full' : 'opacity-0 -translate-y-4 pointer-events-none'}
       `}
     >
@@ -73,7 +78,7 @@ const Navigation = () => {
           </Button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.href}
@@ -92,8 +97,9 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Theme Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-4 md:space-x-6 md:ml-8">
+          {/* Theme Toggle & Language Selector */}
+          <div className="flex items-center space-x-2 md:space-x-4 md:ml-8">
+            <LanguageSelector />
             <Button
               variant="ghost"
               size="icon"
@@ -102,8 +108,6 @@ const Navigation = () => {
             >
               {isDark ? <FontAwesomeIcon icon={faSun} className="h-5 w-5" /> : <FontAwesomeIcon icon={faMoon} className="h-5 w-5" />}
             </Button>
-
-
           </div>
         </div>
 
@@ -133,3 +137,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
