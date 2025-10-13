@@ -85,7 +85,7 @@ const HackerHeroSection: React.FC = () => {
         {/* Profile Image with Hexagonal Frame */}
         <div className="hex-container mb-8">
           <img
-            src="/ahmed-hacker-profile.png"
+            src="./ahmed-hacker-profile.png"
             alt="Ahmed Hacker Profile"
             className="hex-image"
           />
@@ -159,4 +159,3 @@ const HackerHeroSection: React.FC = () => {
 };
 
 export default HackerHeroSection;
-
