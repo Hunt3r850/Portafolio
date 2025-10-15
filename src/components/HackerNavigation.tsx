@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
 import '../styles/hacker-theme.css';
+import ahmedProfile from '/ahmed-hacker-profile.png'; // Import the image
 
 const HackerNavigation: React.FC = () => {
   const { t } = useLanguage();
@@ -52,7 +53,7 @@ const HackerNavigation: React.FC = () => {
             {/* Logo/Brand */}
             <div className="flex items-center space-x-3">
               <img 
-                src="/ahmed-hacker-profile.png" 
+                src={ahmedProfile} 
                 alt="AHByte Logo" 
                 className="w-10 h-10 rounded-lg border border-cyan-400/50 shadow-lg shadow-cyan-400/20 hover:shadow-green-400/30 transition-all duration-300"
               />
