@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import '../styles/hacker-theme.css';
-import ahmedProfile from '/ahmed-hacker-profile.png'; // Import the image
+import ahmedProfile from '@/assets/ahmed-hacker-profile.png'; // Import the image from src/assets
 
 const HackerHeroSection: React.FC = () => {
   const { t } = useLanguage();
