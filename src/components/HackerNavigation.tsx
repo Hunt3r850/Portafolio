@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
 import '../styles/hacker-theme.css';
-import ahmedProfile from '@/assets/ahmed-hacker-profile.png'; // Import the image from src/assets
 
 const HackerNavigation: React.FC = () => {
   const { t } = useLanguage();
@@ -53,7 +52,7 @@ const HackerNavigation: React.FC = () => {
             {/* Logo/Brand */}
             <div className="flex items-center space-x-3">
               <img 
-                src={ahmedProfile} 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031681958/onAmHYTOUrePSSpZ.png" 
                 alt="AHByte Logo" 
                 className="w-10 h-10 rounded-lg border border-cyan-400/50 shadow-lg shadow-cyan-400/20 hover:shadow-green-400/30 transition-all duration-300"
               />

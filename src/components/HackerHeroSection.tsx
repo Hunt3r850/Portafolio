@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import '../styles/hacker-theme.css';
-import ahmedProfile from '@/assets/ahmed-hacker-profile.png'; // Import the image from src/assets
 
 const HackerHeroSection: React.FC = () => {
   const { t } = useLanguage();
@@ -86,7 +85,7 @@ const HackerHeroSection: React.FC = () => {
         {/* Profile Image with Hexagonal Frame */}
         <div className="hex-container mb-8">
           <img
-            src={ahmedProfile}
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031681958/onAmHYTOUrePSSpZ.png"
             alt="Ahmed Hacker Profile"
             className="hex-image"
           />
