@@ -82,13 +82,12 @@ const HackerHeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Profile Image with Hexagonal Frame */}
+        {/* Profile Image with Hexagonal Frame - now using background-image */}
         <div className="hex-container mb-8">
-          <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031681958/onAmHYTOUrePSSpZ.png"
-            alt="Ahmed Hacker Profile"
-            className="hex-image"
-          />
+          <div
+            className="hex-image-bg"
+            style={{ backgroundImage: `url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663031681958/onAmHYTOUrePSSpZ.png)` }}
+          ></div>
           <div className="absolute inset-0 bg-green-400/20 animate-pulse rounded-full blur-xl"></div>
         </div>
 
@@ -148,6 +147,20 @@ const HackerHeroSection: React.FC = () => {
       </div>
 
       <style jsx>{`
+        .hex-image-bg {
+          width: 100px; /* Adjust as needed */
+          height: 100px; /* Adjust as needed */
+          background-size: cover;
+          background-position: center;
+          -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          border: 2px solid #0ff;
+          box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+          transition: all 0.3s ease-in-out;
+        }
+        .hex-container:hover .hex-image-bg {
+          box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0;
+        }
         @keyframes scan-line {
           0% { opacity: 0; transform: translateY(-100vh); }
           50% { opacity: 1; }
