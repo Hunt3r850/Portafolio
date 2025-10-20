@@ -1,4 +1,4 @@
-# Artisan Canvas - Professional Portfolio
+# Professional Portfolio
 
 ## Project Overview
 
