@@ -49,11 +49,13 @@ const HackerNavigation: React.FC = () => {
       }`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
-            {/* Logo/Brand - Using SVG for better reliability */}
+            {/* Logo/Brand */}
             <div className="flex items-center space-x-3">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400 rounded-lg border border-cyan-400/50 shadow-lg shadow-cyan-400/20 hover:shadow-green-400/30 transition-all duration-300">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
+              <img 
+                src="https://hunt3r850.github.io/Portafolio/ahmed-hacker-profile.png" 
+                alt="AHByte Logo" 
+                className="w-10 h-10 rounded-lg border border-cyan-400/50 shadow-lg shadow-cyan-400/20 hover:shadow-green-400/30 transition-all duration-300"
+              />
               <div className="text-green-400 font-mono text-lg">
                 <span className="text-cyan-400">root@</span>
                 <span className="neon-text font-futuristic">AHByte</span>
