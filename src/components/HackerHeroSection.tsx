@@ -86,7 +86,7 @@ const HackerHeroSection: React.FC = () => {
         <div className="hex-container mb-8">
           <div
             className="hex-image-bg"
-            style={{ backgroundImage: `url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663031681958/onAmHYTOUrePSSpZ.png)` }}
+            style={{ backgroundImage: `url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663031681958/ahmed-hacker-profile.png)` }}
           ></div>
           <div className="absolute inset-0 bg-green-400/20 animate-pulse rounded-full blur-xl"></div>
         </div>
