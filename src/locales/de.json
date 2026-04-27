@@ -1,0 +1,180 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "skills": "Fähigkeiten",
+    "education": "Ausbildung",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "name": "Ahmed Odlanier Alfonso Garcia",
+    "title": "Bachelor-Abschluss in Mathematik-Informatik",
+    "subtitle": "Spezialist für Cybersicherheit und Netzwerkadministration",
+    "contactButton": "Kontaktieren Sie mich"
+  },
+  "about": {
+    "title": "Über mich",
+    "description": "IT-Fachmann mit vielfältigen Fähigkeiten und Erfahrungen im Technologiesektor, seit 2007 in der IT tätig. Mein Werdegang war geprägt von Vielfalt, vom Informatikunterricht in der Grundschule über die Durchführung von Audits, Netzwerk- und Systemadministration bis hin zur Sicherstellung der für den Erfolg von Organisationen notwendigen technologischen Infrastruktur.",
+    "stats": {
+      "experience": "18+ Jahre Erfahrung",
+      "projects": "50+ abgeschlossene Projekte",
+      "certifications": "20+ Zertifizierungen"
+    }
+  },
+  "skills": {
+    "title": "Fähigkeiten",
+    "technical": {
+      "title": "Technische Fähigkeiten",
+      "items": [
+        { "name": "Netzwerkadministration", "level": 95 },
+        { "name": "Ethische Hacking-Techniken", "level": 90 },
+        { "name": "Rechnungslegung-Finanzprüfung", "level": 88 },
+        { "name": "Umsetzung von Richtlinien", "level": 85 },
+        { "name": "Multimediale Bearbeitung", "level": 87 },
+        { "name": "Cybersicherheit", "level": 92 }
+      ]
+    },
+    "soft": {
+      "title": "Soft Skills",
+      "items": ["Engagement", "Verantwortung", "Teamfähigkeit", "Effizienz", "Integrität", "Hingabe", "Führungsfähigkeit", "Kommunikation"]
+    },
+    "languages": {
+      "title": "Sprachen",
+      "items": [
+        { "name": "Spanisch", "level": "Muttersprache" },
+        { "name": "Englisch", "level": "Mittelstufe (B2)" },
+        { "name": "Italienisch", "level": "Mittelstufe (B2)" },
+        { "name": "Deutsch", "level": "Grundstufe (A1)" }
+      ]
+    }
+  },
+  "experience": {
+    "title": "Berufserfahrung",
+    "items": [
+      {
+        "title": "Klassifizierungs- und Transportagent",
+        "company": "Airline Assistance Schweiz AG",
+        "location": "Zürich, Schweiz",
+        "period": "2025",
+        "description": "Gepäcktransport, Arbeitnehmerschutz auf der Luftfahrtseite von ZRH, ZRH-Sicherheit, ZRH-Konstruktion."
+      },
+      {
+        "title": "Bauarbeiter",
+        "company": "Bauunternehmen",
+        "location": "Schweiz",
+        "period": "2020 – 2021",
+        "description": "Arbeit an Bauprojekten und Infrastrukturentwicklung."
+      },
+      {
+        "title": "Netzwerkadministrator",
+        "company": "Unternehmen für technische Überprüfung",
+        "location": "Havanna, Kuba",
+        "period": "2014 – 2019",
+        "description": "Verwaltung und Optimierung von Netzwerken und Geschäftssystemen. Implementierung von Sicherheitsmaßnahmen; messbare Steigerung der Betriebseffizienz."
+      },
+      {
+        "title": "Spezialist für Computersicherheit",
+        "company": "Institut für Veterinärmedizin",
+        "location": "Havanna, Kuba",
+        "period": "2013 – 2014",
+        "description": "Durchführung von Cybersicherheitsaudits; Identifikation und Minderung kritischer Schwachstellen."
+      },
+      {
+        "title": "Computerexperte Detektiv",
+        "company": "SEPSA",
+        "location": "Havanna, Kuba",
+        "period": "2010-2012",
+        "description": "Arbeit als Computerexperte, Erstellung forensischer Gutachten und Zeugenaussagen in Gerichtsverfahren."
+      },
+      {
+        "title": "Stellvertretender Rechnungsprüfer für Informatik",
+        "company": "Ministerium für Verkehr",
+        "location": "Havanna, Kuba",
+        "period": "2007-2010",
+        "description": "Durchführung von IT-Sicherheitsaudits für Organisationen; Identifikation kritischer Schwachstellen und Bereitstellung von Lösungen."
+      },
+      {
+        "title": "Grundschullehrerin",
+        "company": "Schule Juan Gualberto Gómez",
+        "location": "Havanna, Kuba",
+        "period": "2001 – 2007",
+        "description": "Implementierung innovativer Lernprogramme, die Technologie in den Unterricht integrierten, was zu einer Steigerung der digitalen Kompetenzen der Schüler um 20 % führte."
+      }
+    ]
+  },
+  "education": {
+    "title": "Ausbildung und Zertifizierungen",
+    "certifications": [
+      {
+        "title": "Ethisches Hacking",
+        "issuer": "MasterD",
+        "location": "Zaragoza, Spanien",
+        "date": "2023 – 2025"
+      },
+      {
+        "title": "Zertifikat Associate Penetration Tester (CAPT)",
+        "issuer": "HACKVISER",
+        "date": "02-2026"
+      },
+      {
+        "title": "Zertifikat Management von Red-Team-Operationen (CRTOM)",
+        "issuer": "RED TEAM LEADERS",
+        "date": "01-2026"
+      },
+      {
+        "title": "Zertifikat Phishing Prevention Specialist (CPPS)",
+        "issuer": "HACK & FIX",
+        "date": "12-2025"
+      },
+      {
+        "title": "Scrum Foundation Learner",
+        "issuer": "Certiprof",
+        "date": "04-2025"
+      },
+      {
+        "title": "AWS Cloud Quest: Cloud-Praktiker",
+        "issuer": "Amazon Web Services",
+        "date": "01-2025"
+      },
+      {
+        "title": "Google: Künstliche Intelligenz und Produktivität",
+        "issuer": "Academy Santander",
+        "date": "01-2025"
+      },
+      {
+        "title": "Bachelor-Abschluss in Mathematik-Informatik",
+        "issuer": "Instituto Superior Enrique José Varona",
+        "location": "Havanna, Kuba",
+        "date": "2002 - 2007"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Bereit zusammenzuarbeiten?",
+    "description": "Ich bin für neue Möglichkeiten und Zusammenarbeit verfügbar. Zögern Sie nicht, mich zu kontaktieren.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Senden",
+      "success": "Nachricht erfolgreich versendet!",
+      "error": "Fehler beim Versenden der Nachricht. Bitte versuchen Sie es erneut."
+    },
+    "location": "Winterthur, Schweiz",
+    "phone": "+41 782 558 402",
+    "email": "aalfonso850@yahoo.com"
+  },
+  "social": {
+    "title": "Verbinden Sie sich mit mir",
+    "platforms": {
+      "hackviser": "Hackviser",
+      "tryhackme": "TryHackMe",
+      "hackthebox": "HackTheBox",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  }
+}

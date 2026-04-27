@@ -1,0 +1,180 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Ahmed Odlanier Alfonso Garcia",
+    "title": "Bachelor's Degree in Mathematics-Computer Science",
+    "subtitle": "Cybersecurity and Network Administration Specialist",
+    "contactButton": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "IT professional with diverse skills and experience in the technology sector, active in IT since 2007. My career has been marked by diversity, from teaching computer science in elementary school to conducting audits, network and systems administration, ensuring the technological infrastructure necessary for organizational success.",
+    "stats": {
+      "experience": "18+ Years of Experience",
+      "projects": "50+ Projects Completed",
+      "certifications": "20+ Certifications"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "technical": {
+      "title": "Technical Skills",
+      "items": [
+        { "name": "Network Administration", "level": 95 },
+        { "name": "Ethical Hacking Techniques", "level": 90 },
+        { "name": "Financial Accounting Audit", "level": 88 },
+        { "name": "Policy Implementation", "level": 85 },
+        { "name": "Multimedia Processing", "level": 87 },
+        { "name": "Cybersecurity", "level": 92 }
+      ]
+    },
+    "soft": {
+      "title": "Soft Skills",
+      "items": ["Commitment", "Responsibility", "Teamwork", "Efficiency", "Integrity", "Dedication", "Leadership", "Communication"]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        { "name": "Spanish", "level": "Native" },
+        { "name": "English", "level": "Intermediate (B2)" },
+        { "name": "Italian", "level": "Intermediate (B2)" },
+        { "name": "German", "level": "Basic (A1)" }
+      ]
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "items": [
+      {
+        "title": "Classification and Transport Agent",
+        "company": "Airline Assistance Schweiz AG",
+        "location": "Zurich, Switzerland",
+        "period": "2025",
+        "description": "Baggage transportation, worker protection on the air side of ZRH, ZRH security, ZRH construction."
+      },
+      {
+        "title": "Construction Worker",
+        "company": "Construction Company",
+        "location": "Switzerland",
+        "period": "2020 – 2021",
+        "description": "Work on construction projects and infrastructure development."
+      },
+      {
+        "title": "Network Administrator",
+        "company": "Technical Inspection Company",
+        "location": "Havana, Cuba",
+        "period": "2014 – 2019",
+        "description": "Management and optimization of networks and business systems. Implementation of security measures; measurable increase in operational efficiency."
+      },
+      {
+        "title": "Computer Security Specialist",
+        "company": "Institute of Veterinary Medicine",
+        "location": "Havana, Cuba",
+        "period": "2013 – 2014",
+        "description": "Conducting cybersecurity audits; identification and mitigation of critical vulnerabilities."
+      },
+      {
+        "title": "Computer Expert Detective",
+        "company": "SEPSA",
+        "location": "Havana, Cuba",
+        "period": "2010-2012",
+        "description": "Work as a computer expert, preparation of forensic reports and testimony in legal proceedings."
+      },
+      {
+        "title": "Deputy IT Auditor",
+        "company": "Ministry of Transport",
+        "location": "Havana, Cuba",
+        "period": "2007-2010",
+        "description": "Conducting IT security audits for organizations; identification of critical vulnerabilities and provision of solutions."
+      },
+      {
+        "title": "Elementary School Teacher",
+        "company": "Juan Gualberto Gómez School",
+        "location": "Havana, Cuba",
+        "period": "2001 – 2007",
+        "description": "Implementation of innovative educational programs that integrated technology into teaching, resulting in a 20% increase in students' digital competence."
+      }
+    ]
+  },
+  "education": {
+    "title": "Education and Certifications",
+    "certifications": [
+      {
+        "title": "Ethical Hacking",
+        "issuer": "MasterD",
+        "location": "Zaragoza, Spain",
+        "date": "2023 – 2025"
+      },
+      {
+        "title": "Associate Penetration Tester Certificate (CAPT)",
+        "issuer": "HACKVISER",
+        "date": "02-2026"
+      },
+      {
+        "title": "Red-Team Operations Management Certificate (CRTOM)",
+        "issuer": "RED TEAM LEADERS",
+        "date": "01-2026"
+      },
+      {
+        "title": "Phishing Prevention Specialist Certificate (CPPS)",
+        "issuer": "HACK & FIX",
+        "date": "12-2025"
+      },
+      {
+        "title": "Scrum Foundation Learner",
+        "issuer": "Certiprof",
+        "date": "04-2025"
+      },
+      {
+        "title": "AWS Cloud Quest: Cloud Practitioner",
+        "issuer": "Amazon Web Services",
+        "date": "01-2025"
+      },
+      {
+        "title": "Google: Artificial Intelligence and Productivity",
+        "issuer": "Academy Santander",
+        "date": "01-2025"
+      },
+      {
+        "title": "Bachelor's Degree in Mathematics-Computer Science",
+        "issuer": "Instituto Superior Enrique José Varona",
+        "location": "Havana, Cuba",
+        "date": "2002 - 2007"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ready to Work Together?",
+    "description": "I'm available for new opportunities and collaborations. Feel free to contact me.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "location": "Winterthur, Switzerland",
+    "phone": "+41 782 558 402",
+    "email": "aalfonso850@yahoo.com"
+  },
+  "social": {
+    "title": "Connect With Me",
+    "platforms": {
+      "hackviser": "Hackviser",
+      "tryhackme": "TryHackMe",
+      "hackthebox": "HackTheBox",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  }
+}
