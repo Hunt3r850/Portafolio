@@ -1,312 +1,143 @@
 {
   "navigation": {
-    "home": "Home",
-    "about": "About",
-    "experience": "Experience",
-    "certifications": "Certifications",
-    "contact": "Contact"
+    "home": "Startseite",
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "certifications": "Zertifizierungen",
+    "contact": "Kontakt"
   },
   "hero": {
     "name": "Ahmed Odlanier Alfonso Garcia",
-    "title": "Cybersecurity Specialist",
-    "subtitle": "Ethical Hacker | Network Administrator | IT Auditor",
+    "title": "Cybersicherheits-Spezialist",
+    "subtitle": "Ethical Hacker | Netzwerkadministrator | IT-Auditor",
     "status": "SYSTEM ONLINE",
-    "accessLevel": "ACCESS LEVEL: MAXIMUM"
+    "accessLevel": "ZUGRIFFSSTUFE: MAXIMAL"
   },
   "about": {
-    "title": "Professional Profile",
-    "description": "IT professional with diverse skills and experience in the technology sector, active in IT since 2007. My career has been marked by diversity, from teaching computer science in elementary school to conducting audits, network and systems administration, ensuring the technological infrastructure necessary for organizational success.",
+    "title": "Berufsprofil",
+    "description": "IT-Experte mit vielfältigen Fähigkeiten und Erfahrungen im Technologiesektor, seit 2007 in der IT tätig. Spezialisiert auf Sicherheitsaudits, Netzwerk- und Systemadministration, um die für den Erfolg von Organisationen notwendige technologische Infrastruktur sicherzustellen.",
     "stats": {
-      "experience": "18+ Years of Experience",
-      "projects": "50+ Projects Completed",
-      "certifications": "24+ Certifications"
+      "experience": "18+ Jahre Erfahrung",
+      "projects": "50+ Abgeschlossene Projekte",
+      "certifications": "25+ Zertifizierungen"
     },
-    "location": "Winterthur, Switzerland",
+    "location": "Winterthur, Schweiz",
     "contact": {
       "email": "aalfonso850@yahoo.com",
       "phone": "+41 782 558 402"
     }
   },
   "skills": {
-    "title": "Technical Skills",
+    "title": "Technische Fähigkeiten",
     "technical": [
-      { "name": "Network Administration", "level": 95 },
+      { "name": "Netzwerkadministration", "level": 95 },
       { "name": "Ethical Hacking", "level": 92 },
-      { "name": "Cybersecurity Auditing", "level": 90 },
+      { "name": "Cybersicherheits-Auditing", "level": 90 },
       { "name": "Penetration Testing", "level": 88 },
-      { "name": "Vulnerability Management", "level": 87 },
-      { "name": "Forensic Analysis", "level": 85 },
-      { "name": "Security Policy Implementation", "level": 88 },
-      { "name": "Server Administration", "level": 90 }
+      { "name": "Schwachstellenmanagement", "level": 87 },
+      { "name": "Forensische Analyse", "level": 85 },
+      { "name": "Implementierung von Sicherheitsrichtlinien", "level": 88 },
+      { "name": "Serveradministration", "level": 90 }
     ],
     "soft": [
-      "Leadership",
-      "Communication",
-      "Problem Solving",
-      "Teamwork",
-      "Critical Thinking",
-      "Integrity",
-      "Dedication",
-      "Efficiency"
+      "Führung",
+      "Kommunikation",
+      "Problemlösung",
+      "Teamarbeit",
+      "Kritisches Denken",
+      "Integrität",
+      "Engagement",
+      "Effizienz"
     ],
     "languages": [
-      { "name": "Spanish", "level": "Native" },
-      { "name": "English", "level": "B2" },
-      { "name": "Italian", "level": "B2" },
-      { "name": "German", "level": "A1" }
+      { "name": "Spanisch", "level": "Muttersprache" },
+      { "name": "Englisch", "level": "B2" },
+      { "name": "Italienisch", "level": "B2" },
+      { "name": "Deutsch", "level": "A1" }
     ]
   },
   "experience": {
-    "title": "Professional Experience",
+    "title": "Berufserfahrung",
     "items": [
       {
-        "position": "Network Administrator",
-        "company": "Technical Inspection Company (MFK)",
-        "location": "Havana, Cuba",
+        "position": "Netzwerkadministrator",
+        "company": "Technische Inspektionsfirma (MFK)",
+        "location": "Havanna, Kuba",
         "period": "2014 – 2019",
-        "description": "Management and optimization of networks and business systems. Implementation of computer security measures. Improvement and increase of operational efficiency."
+        "description": "Verwaltung und Optimierung von Netzwerken und Geschäftssystemen. Implementierung von Computersicherheitsmaßnahmen. Verbesserung und Steigerung der Betriebseffizienz."
       },
       {
-        "position": "Computer Security Specialist",
-        "company": "Institute of Veterinary Medicine",
-        "location": "Havana, Cuba",
+        "position": "Spezialist für Computersicherheit",
+        "company": "Institut für Veterinärmedizin",
+        "location": "Havanna, Kuba",
         "period": "2013 – 2014",
-        "description": "Conducting cybersecurity audits and assessments. Identification and mitigation of vulnerabilities in information systems. Strengthening protection measures."
+        "description": "Durchführung von Cybersicherheitsaudits und -bewertungen. Identifizierung und Minderung von Schwachstellen in Informationssystemen. Stärkung der Schutzmaßnahmen."
       },
       {
-        "position": "Computer Expert Detective",
+        "position": "Computerforensiker",
         "company": "SEPSA",
-        "location": "Havana, Cuba",
+        "location": "Havanna, Kuba",
         "period": "2010 – 2012",
-        "description": "Work as computer expert, preparation of expert reports and testimonies in judicial processes. Forensic analysis of systems."
+        "description": "Arbeit als Computerforensiker, Erstellung von Gutachten und Zeugenaussagen in Gerichtsverfahren. Forensische Analyse von Systemen."
       },
       {
-        "position": "Deputy IT Auditor",
-        "company": "Ministry of Transport",
-        "location": "Havana, Cuba",
+        "position": "Stellvertretender IT-Auditor",
+        "company": "Verkehrsministerium",
+        "location": "Havanna, Kuba",
         "period": "2007 – 2010",
-        "description": "Conducting IT security audits for organizations, identifying critical vulnerabilities and providing solutions."
-      },
-      {
-        "position": "Elementary School Teacher",
-        "company": "Juan Gualberto Gómez School",
-        "location": "Havana, Cuba",
-        "period": "2001 – 2007",
-        "description": "Implementation of innovative educational programs that integrated technology into teaching, resulting in a 20% increase in students' digital competence."
+        "description": "Durchführung von IT-Sicherheitsaudits für Organisationen, Identifizierung kritischer Schwachstellen und Bereitstellung von Lösungen."
       }
     ]
   },
   "certifications": {
-    "title": "Certifications and Education",
+    "title": "Zertifizierungen und Ausbildung",
     "items": [
-      {
-        "title": "Cybersecurity and Ethical Hacking Course",
-        "issuer": "BIG School",
-        "date": "04-2026",
-        "type": "Course"
-      },
-      {
-        "title": "Associate Penetration Tester (CAPT)",
-        "issuer": "HACKVISER",
-        "date": "02-2026",
-        "type": "Certification"
-      },
-      {
-        "title": "Vibe Coding and AI Automation",
-        "issuer": "BIG School",
-        "date": "01-2026",
-        "type": "Course"
-      },
-      {
-        "title": "Red Team Operations Management (CRTOM)",
-        "issuer": "RED TEAM LEADERS",
-        "date": "01-2026",
-        "type": "Certification"
-      },
-      {
-        "title": "Phishing Prevention Specialist (CPPS)",
-        "issuer": "HACK & FIX",
-        "date": "12-2025",
-        "type": "Certification"
-      },
-      {
-        "title": "Marketing Audit Pro",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Certification"
-      },
-      {
-        "title": "Development with AI",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Course"
-      },
-      {
-        "title": "AI WorkFlows",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Course"
-      },
-      {
-        "title": "Ethical Hacking",
-        "issuer": "MasterD",
-        "location": "Zaragoza, Spain",
-        "date": "2023 – 2025",
-        "type": "Certification"
-      },
-      {
-        "title": "Scrum Foundation Learner",
-        "issuer": "Certiprof",
-        "date": "04-2025",
-        "type": "Certification"
-      },
-      {
-        "title": "AWS Cloud Quest: Cloud Practitioner",
-        "issuer": "Amazon Web Services",
-        "date": "01-2025",
-        "type": "Certification"
-      },
-      {
-        "title": "AI and Productivity",
-        "issuer": "Academy Santander",
-        "date": "01-2025",
-        "type": "Course"
-      },
-      {
-        "title": "Cybersecurity in Remote Work",
-        "issuer": "Google Digital Academy",
-        "date": "11-2024",
-        "type": "Course"
-      },
-      {
-        "title": "Digitalize Your Business with Google Tools",
-        "issuer": "Google Digital Academy",
-        "date": "11-2024",
-        "type": "Course"
-      },
-      {
-        "title": "Mobile App Development",
-        "issuer": "Google Digital Academy",
-        "date": "10-2024",
-        "type": "Course"
-      },
-      {
-        "title": "Cybersecurity Awareness (CAPC)",
-        "issuer": "Certiprof",
-        "date": "07-2024",
-        "type": "Certification"
-      },
-      {
-        "title": "Postgraduate MS-SQL Server 2005",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Exchange Server 2003",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate ISA-Server 2004",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Active Directory",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Network Structures Windows 2003",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Network Services",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Internal Control",
-        "issuer": "PREGER",
-        "location": "Havana, Cuba",
-        "date": "2008",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Bachelor's Degree in Mathematics-Computer Science",
-        "issuer": "Instituto Superior Enrique José Varona",
-        "location": "Havana, Cuba",
-        "date": "2002 – 2007",
-        "type": "Bachelor's Degree"
-      }
+      { "title": "CAPT (Certified Advanced Penetration Tester)", "issuer": "HACKVISER", "date": "2026", "type": "Zertifizierung" },
+      { "title": "CRTOM (Certified Red Team Operational Master)", "issuer": "RED TEAM LEADERS", "date": "2026", "type": "Zertifizierung" },
+      { "title": "CPPS (Certified Professional Pentesting Specialist)", "issuer": "HACK & FIX", "date": "2025", "type": "Zertifizierung" },
+      { "title": "C-IA (Certified AI Specialist)", "issuer": "BIG School", "date": "2025", "type": "Zertifizierung" },
+      { "title": "C-AIA (Certified AI Automation)", "issuer": "BIG School", "date": "2025", "type": "Zertifizierung" },
+      { "title": "Ethical Hacking", "issuer": "MasterD", "date": "2023-2025", "type": "Zertifizierung" },
+      { "title": "Scrum Foundation Learner", "issuer": "Certiprof", "date": "2025", "type": "Zertifizierung" },
+      { "title": "AWS Cloud Quest: Cloud Practitioner", "issuer": "Amazon Web Services", "date": "2025", "type": "Zertifizierung" },
+      { "title": "Google: Künstliche Intelligenz und Produktivität", "issuer": "Academy Santander", "date": "2025", "type": "Kurs" },
+      { "title": "Cybersicherheit in der Telearbeit", "issuer": "Google Digital Academy", "date": "2024", "type": "Kurs" },
+      { "title": "Digitalisieren Sie Ihr Unternehmen mit Google Tools", "issuer": "Google Digital Academy", "date": "2024", "type": "Kurs" },
+      { "title": "Mobile App Entwicklung", "issuer": "Google Digital Academy", "date": "2024", "type": "Kurs" },
+      { "title": "Cybersicherheitsbewusstsein (CAPC)", "issuer": "Certiprof", "date": "2024", "type": "Zertifizierung" },
+      { "title": "Postgraduiertenstudium MS-SQL Server 2005", "issuer": "DESOFT", "date": "2010", "type": "Postgraduiertenstudium" },
+      { "title": "Postgraduiertenstudium Exchange Server 2003", "issuer": "DESOFT", "date": "2010", "type": "Postgraduiertenstudium" },
+      { "title": "Postgraduiertenstudium ISA-Server 2004", "issuer": "DESOFT", "date": "2010", "type": "Postgraduiertenstudium" },
+      { "title": "Postgraduiertenstudium Active Directory", "issuer": "DESOFT", "date": "2010", "type": "Postgraduiertenstudium" },
+      { "title": "Postgraduiertenstudium Netzwerkstrukturen Windows 2003", "issuer": "DESOFT", "date": "2010", "type": "Postgraduiertenstudium" },
+      { "title": "Postgraduiertenstudium Netzwerkdienste", "issuer": "DESOFT", "date": "2010", "type": "Postgraduiertenstudium" },
+      { "title": "Postgraduiertenstudium Interne Kontrolle", "issuer": "PREGER", "date": "2008", "type": "Postgraduiertenstudium" },
+      { "title": "Bachelor-Abschluss in Mathematik-Informatik", "issuer": "Instituto Superior Enrique José Varona", "date": "2002-2007", "type": "Bachelor-Abschluss" }
     ]
   },
   "contact": {
-    "title": "Secure Contact Center",
-    "description": "Available for new opportunities and collaborations. Contact me through this secure form.",
+    "title": "Sicheres Kontaktzentrum",
+    "description": "Verfügbar für neue Möglichkeiten und Kooperationen. Kontaktieren Sie mich über dieses sichere Formular.",
     "form": {
       "name": "Name",
-      "email": "Email",
-      "subject": "Subject",
-      "message": "Message",
-      "submit": "Send Message",
-      "success": "Message sent successfully!",
-      "error": "Error sending message. Please try again."
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
     }
   },
   "social": {
-    "title": "Connect With Me",
-    "description": "Access to my professional profiles",
+    "title": "Verbinden Sie sich mit mir",
+    "description": "Zugang zu meinen beruflichen Profilen",
     "platforms": [
-      {
-        "name": "Hackviser",
-        "url": "https://app.hackviser.com/profile/AHByte",
-        "icon": "shield",
-        "description": "Cybersecurity Platform"
-      },
-      {
-        "name": "TryHackMe",
-        "url": "https://tryhackme.com/p/Hunt3r850",
-        "icon": "target",
-        "description": "Ethical Hacking Platform"
-      },
-      {
-        "name": "HackTheBox",
-        "url": "https://app.hackthebox.com/profile/1743244",
-        "icon": "box",
-        "description": "Penetration Testing Platform"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/hunt3r850",
-        "icon": "code",
-        "description": "Code Repository"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ahmed-alfonso-garcia/",
-        "icon": "briefcase",
-        "description": "Professional Profile"
-      },
-      {
-        "name": "X (Twitter)",
-        "url": "https://x.com/aalfonso850",
-        "icon": "twitter",
-        "description": "Social Network"
-      }
+      { "name": "Hackviser", "url": "https://app.hackviser.com/profile/AHByte", "icon": "shield", "description": "Cybersicherheitsplattform" },
+      { "name": "TryHackMe", "url": "https://tryhackme.com/p/Hunt3r850", "icon": "target", "description": "Ethical Hacking Plattform" },
+      { "name": "HackTheBox", "url": "https://app.hackthebox.com/profile/1743244", "icon": "box", "description": "Penetration Testing Plattform" },
+      { "name": "GitHub", "url": "https://github.com/hunt3r850", "icon": "code", "description": "Code-Repository" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/ahmed-alfonso-garcia/", "icon": "briefcase", "description": "Berufsprofil" },
+      { "name": "X (Twitter)", "url": "https://x.com/aalfonso850", "icon": "twitter", "description": "Soziales Netzwerk" }
     ]
   }
 }

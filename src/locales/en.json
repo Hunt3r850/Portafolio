@@ -15,11 +15,11 @@
   },
   "about": {
     "title": "Professional Profile",
-    "description": "IT professional with diverse skills and experience in the technology sector, active in IT since 2007. My career has been marked by diversity, from teaching computer science in elementary school to conducting audits, network and systems administration, ensuring the technological infrastructure necessary for organizational success.",
+    "description": "IT professional with diverse skills and experience in the technology sector, active in IT since 2007. Specialized in security audits, network and systems administration, ensuring the technological infrastructure necessary for organizational success.",
     "stats": {
       "experience": "18+ Years of Experience",
-      "projects": "50+ Projects Completed",
-      "certifications": "24+ Certifications"
+      "projects": "50+ Completed Projects",
+      "certifications": "25+ Certifications"
     },
     "location": "Winterthur, Switzerland",
     "contact": {
@@ -67,18 +67,18 @@
         "description": "Management and optimization of networks and business systems. Implementation of computer security measures. Improvement and increase of operational efficiency."
       },
       {
-        "position": "Computer Security Specialist",
+        "position": "Cybersecurity Specialist",
         "company": "Institute of Veterinary Medicine",
         "location": "Havana, Cuba",
         "period": "2013 – 2014",
         "description": "Conducting cybersecurity audits and assessments. Identification and mitigation of vulnerabilities in information systems. Strengthening protection measures."
       },
       {
-        "position": "Computer Expert Detective",
+        "position": "Computer Forensics Expert",
         "company": "SEPSA",
         "location": "Havana, Cuba",
         "period": "2010 – 2012",
-        "description": "Work as computer expert, preparation of expert reports and testimonies in judicial processes. Forensic analysis of systems."
+        "description": "Work as a computer forensics expert, preparing expert reports and testimonies in judicial proceedings. Forensic analysis of systems."
       },
       {
         "position": "Deputy IT Auditor",
@@ -86,172 +86,33 @@
         "location": "Havana, Cuba",
         "period": "2007 – 2010",
         "description": "Conducting IT security audits for organizations, identifying critical vulnerabilities and providing solutions."
-      },
-      {
-        "position": "Elementary School Teacher",
-        "company": "Juan Gualberto Gómez School",
-        "location": "Havana, Cuba",
-        "period": "2001 – 2007",
-        "description": "Implementation of innovative educational programs that integrated technology into teaching, resulting in a 20% increase in students' digital competence."
       }
     ]
   },
   "certifications": {
     "title": "Certifications and Education",
     "items": [
-      {
-        "title": "Cybersecurity and Ethical Hacking Course",
-        "issuer": "BIG School",
-        "date": "04-2026",
-        "type": "Course"
-      },
-      {
-        "title": "Associate Penetration Tester (CAPT)",
-        "issuer": "HACKVISER",
-        "date": "02-2026",
-        "type": "Certification"
-      },
-      {
-        "title": "Vibe Coding and AI Automation",
-        "issuer": "BIG School",
-        "date": "01-2026",
-        "type": "Course"
-      },
-      {
-        "title": "Red Team Operations Management (CRTOM)",
-        "issuer": "RED TEAM LEADERS",
-        "date": "01-2026",
-        "type": "Certification"
-      },
-      {
-        "title": "Phishing Prevention Specialist (CPPS)",
-        "issuer": "HACK & FIX",
-        "date": "12-2025",
-        "type": "Certification"
-      },
-      {
-        "title": "Marketing Audit Pro",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Certification"
-      },
-      {
-        "title": "Development with AI",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Course"
-      },
-      {
-        "title": "AI WorkFlows",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Course"
-      },
-      {
-        "title": "Ethical Hacking",
-        "issuer": "MasterD",
-        "location": "Zaragoza, Spain",
-        "date": "2023 – 2025",
-        "type": "Certification"
-      },
-      {
-        "title": "Scrum Foundation Learner",
-        "issuer": "Certiprof",
-        "date": "04-2025",
-        "type": "Certification"
-      },
-      {
-        "title": "AWS Cloud Quest: Cloud Practitioner",
-        "issuer": "Amazon Web Services",
-        "date": "01-2025",
-        "type": "Certification"
-      },
-      {
-        "title": "AI and Productivity",
-        "issuer": "Academy Santander",
-        "date": "01-2025",
-        "type": "Course"
-      },
-      {
-        "title": "Cybersecurity in Remote Work",
-        "issuer": "Google Digital Academy",
-        "date": "11-2024",
-        "type": "Course"
-      },
-      {
-        "title": "Digitalize Your Business with Google Tools",
-        "issuer": "Google Digital Academy",
-        "date": "11-2024",
-        "type": "Course"
-      },
-      {
-        "title": "Mobile App Development",
-        "issuer": "Google Digital Academy",
-        "date": "10-2024",
-        "type": "Course"
-      },
-      {
-        "title": "Cybersecurity Awareness (CAPC)",
-        "issuer": "Certiprof",
-        "date": "07-2024",
-        "type": "Certification"
-      },
-      {
-        "title": "Postgraduate MS-SQL Server 2005",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Exchange Server 2003",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate ISA-Server 2004",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Active Directory",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Network Structures Windows 2003",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Network Services",
-        "issuer": "DESOFT",
-        "location": "Havana, Cuba",
-        "date": "2010",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Postgraduate Internal Control",
-        "issuer": "PREGER",
-        "location": "Havana, Cuba",
-        "date": "2008",
-        "type": "Postgraduate"
-      },
-      {
-        "title": "Bachelor's Degree in Mathematics-Computer Science",
-        "issuer": "Instituto Superior Enrique José Varona",
-        "location": "Havana, Cuba",
-        "date": "2002 – 2007",
-        "type": "Bachelor's Degree"
-      }
+      { "title": "CAPT (Certified Advanced Penetration Tester)", "issuer": "HACKVISER", "date": "2026", "type": "Certification" },
+      { "title": "CRTOM (Certified Red Team Operational Master)", "issuer": "RED TEAM LEADERS", "date": "2026", "type": "Certification" },
+      { "title": "CPPS (Certified Professional Pentesting Specialist)", "issuer": "HACK & FIX", "date": "2025", "type": "Certification" },
+      { "title": "C-IA (Certified AI Specialist)", "issuer": "BIG School", "date": "2025", "type": "Certification" },
+      { "title": "C-AIA (Certified AI Automation)", "issuer": "BIG School", "date": "2025", "type": "Certification" },
+      { "title": "Ethical Hacking", "issuer": "MasterD", "date": "2023-2025", "type": "Certification" },
+      { "title": "Scrum Foundation Learner", "issuer": "Certiprof", "date": "2025", "type": "Certification" },
+      { "title": "AWS Cloud Quest: Cloud Practitioner", "issuer": "Amazon Web Services", "date": "2025", "type": "Certification" },
+      { "title": "Google: Artificial Intelligence and Productivity", "issuer": "Academy Santander", "date": "2025", "type": "Course" },
+      { "title": "Cybersecurity in Remote Work", "issuer": "Google Digital Academy", "date": "2024", "type": "Course" },
+      { "title": "Digitalize Your Business with Google Tools", "issuer": "Google Digital Academy", "date": "2024", "type": "Course" },
+      { "title": "Mobile App Development", "issuer": "Google Digital Academy", "date": "2024", "type": "Course" },
+      { "title": "Cybersecurity Awareness (CAPC)", "issuer": "Certiprof", "date": "2024", "type": "Certification" },
+      { "title": "Postgraduate MS-SQL Server 2005", "issuer": "DESOFT", "date": "2010", "type": "Postgraduate" },
+      { "title": "Postgraduate Exchange Server 2003", "issuer": "DESOFT", "date": "2010", "type": "Postgraduate" },
+      { "title": "Postgraduate ISA-Server 2004", "issuer": "DESOFT", "date": "2010", "type": "Postgraduate" },
+      { "title": "Postgraduate Active Directory", "issuer": "DESOFT", "date": "2010", "type": "Postgraduate" },
+      { "title": "Postgraduate Network Structures Windows 2003", "issuer": "DESOFT", "date": "2010", "type": "Postgraduate" },
+      { "title": "Postgraduate Network Services", "issuer": "DESOFT", "date": "2010", "type": "Postgraduate" },
+      { "title": "Postgraduate Internal Control", "issuer": "PREGER", "date": "2008", "type": "Postgraduate" },
+      { "title": "Bachelor's Degree in Mathematics-Computer Science", "issuer": "Instituto Superior Enrique José Varona", "date": "2002-2007", "type": "Bachelor's Degree" }
     ]
   },
   "contact": {
@@ -269,44 +130,14 @@
   },
   "social": {
     "title": "Connect With Me",
-    "description": "Access to my professional profiles",
+    "description": "Access my professional profiles",
     "platforms": [
-      {
-        "name": "Hackviser",
-        "url": "https://app.hackviser.com/profile/AHByte",
-        "icon": "shield",
-        "description": "Cybersecurity Platform"
-      },
-      {
-        "name": "TryHackMe",
-        "url": "https://tryhackme.com/p/Hunt3r850",
-        "icon": "target",
-        "description": "Ethical Hacking Platform"
-      },
-      {
-        "name": "HackTheBox",
-        "url": "https://app.hackthebox.com/profile/1743244",
-        "icon": "box",
-        "description": "Penetration Testing Platform"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/hunt3r850",
-        "icon": "code",
-        "description": "Code Repository"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ahmed-alfonso-garcia/",
-        "icon": "briefcase",
-        "description": "Professional Profile"
-      },
-      {
-        "name": "X (Twitter)",
-        "url": "https://x.com/aalfonso850",
-        "icon": "twitter",
-        "description": "Social Network"
-      }
+      { "name": "Hackviser", "url": "https://app.hackviser.com/profile/AHByte", "icon": "shield", "description": "Cybersecurity Platform" },
+      { "name": "TryHackMe", "url": "https://tryhackme.com/p/Hunt3r850", "icon": "target", "description": "Ethical Hacking Platform" },
+      { "name": "HackTheBox", "url": "https://app.hackthebox.com/profile/1743244", "icon": "box", "description": "Penetration Testing Platform" },
+      { "name": "GitHub", "url": "https://github.com/hunt3r850", "icon": "code", "description": "Code Repository" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/ahmed-alfonso-garcia/", "icon": "briefcase", "description": "Professional Profile" },
+      { "name": "X (Twitter)", "url": "https://x.com/aalfonso850", "icon": "twitter", "description": "Social Network" }
     ]
   }
 }

@@ -15,11 +15,11 @@
   },
   "about": {
     "title": "Perfil Profesional",
-    "description": "Profesional informático con habilidades diversas y experiencia en el sector tecnológico, activo en TI desde 2007. Mi trayectoria ha estado marcada por la diversidad, desde la enseñanza de informática en primaria hasta la realización de auditorías, administración de redes y sistemas, asegurando la infraestructura tecnológica necesaria para el éxito de las organizaciones.",
+    "description": "Profesional informático con habilidades diversas y experiencia en el sector tecnológico, activo en TI desde 2007. Especializado en auditorías de seguridad, administración de redes y sistemas, asegurando la infraestructura tecnológica necesaria para el éxito de las organizaciones.",
     "stats": {
       "experience": "18+ Años de Experiencia",
       "projects": "50+ Proyectos Completados",
-      "certifications": "24+ Certificaciones"
+      "certifications": "25+ Certificaciones"
     },
     "location": "Winterthur, Suiza",
     "contact": {
@@ -86,172 +86,33 @@
         "location": "La Habana, Cuba",
         "period": "2007 – 2010",
         "description": "Realización de auditorías de seguridad TI para organizaciones, identificación de vulnerabilidades críticas y provisión de soluciones."
-      },
-      {
-        "position": "Maestro de Primaria (Informática)",
-        "company": "Escuela Juan Gualberto Gómez",
-        "location": "La Habana, Cuba",
-        "period": "2001 – 2007",
-        "description": "Implementación de programas educativos innovadores que integraron tecnología en la enseñanza, resultando en un aumento del 20% en la competencia digital de los estudiantes."
       }
     ]
   },
   "certifications": {
     "title": "Certificaciones y Educación",
     "items": [
-      {
-        "title": "Curso Ciberseguridad y Hacking Ético",
-        "issuer": "BIG School",
-        "date": "04-2026",
-        "type": "Curso"
-      },
-      {
-        "title": "Associate Penetration Tester (CAPT)",
-        "issuer": "HACKVISER",
-        "date": "02-2026",
-        "type": "Certificación"
-      },
-      {
-        "title": "Vibe Coding y Automatización con IA",
-        "issuer": "BIG School",
-        "date": "01-2026",
-        "type": "Curso"
-      },
-      {
-        "title": "Management de Red-Team Operations (CRTOM)",
-        "issuer": "RED TEAM LEADERS",
-        "date": "01-2026",
-        "type": "Certificación"
-      },
-      {
-        "title": "Phishing Prevention Specialist (CPPS)",
-        "issuer": "HACK & FIX",
-        "date": "12-2025",
-        "type": "Certificación"
-      },
-      {
-        "title": "Marketing Audit Pro",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Certificación"
-      },
-      {
-        "title": "Desarrollo con IA",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Curso"
-      },
-      {
-        "title": "IA WorkFlows",
-        "issuer": "BIG School",
-        "date": "09-2025",
-        "type": "Curso"
-      },
-      {
-        "title": "Hacking Ético",
-        "issuer": "MasterD",
-        "location": "Zaragoza, España",
-        "date": "2023 – 2025",
-        "type": "Certificación"
-      },
-      {
-        "title": "Scrum Foundation Learner",
-        "issuer": "Certiprof",
-        "date": "04-2025",
-        "type": "Certificación"
-      },
-      {
-        "title": "AWS Cloud Quest: Cloud Practitioner",
-        "issuer": "Amazon Web Services",
-        "date": "01-2025",
-        "type": "Certificación"
-      },
-      {
-        "title": "IA y Productividad",
-        "issuer": "Academy Santander",
-        "date": "01-2025",
-        "type": "Curso"
-      },
-      {
-        "title": "Cyberseguridad en el Teletrabajo",
-        "issuer": "Google Digital Academy",
-        "date": "11-2024",
-        "type": "Curso"
-      },
-      {
-        "title": "Digitaliza tu Empresa con Google Tools",
-        "issuer": "Google Digital Academy",
-        "date": "11-2024",
-        "type": "Curso"
-      },
-      {
-        "title": "Desarrollo de Apps Móviles",
-        "issuer": "Google Digital Academy",
-        "date": "10-2024",
-        "type": "Curso"
-      },
-      {
-        "title": "Cybersecurity Awareness (CAPC)",
-        "issuer": "Certiprof",
-        "date": "07-2024",
-        "type": "Certificación"
-      },
-      {
-        "title": "Postgrado MS-SQL Server 2005",
-        "issuer": "DESOFT",
-        "location": "La Habana, Cuba",
-        "date": "2010",
-        "type": "Postgrado"
-      },
-      {
-        "title": "Postgrado Exchange Server 2003",
-        "issuer": "DESOFT",
-        "location": "La Habana, Cuba",
-        "date": "2010",
-        "type": "Postgrado"
-      },
-      {
-        "title": "Postgrado ISA-Server 2004",
-        "issuer": "DESOFT",
-        "location": "La Habana, Cuba",
-        "date": "2010",
-        "type": "Postgrado"
-      },
-      {
-        "title": "Postgrado Active Directory",
-        "issuer": "DESOFT",
-        "location": "La Habana, Cuba",
-        "date": "2010",
-        "type": "Postgrado"
-      },
-      {
-        "title": "Postgrado Estructuras de Red Windows 2003",
-        "issuer": "DESOFT",
-        "location": "La Habana, Cuba",
-        "date": "2010",
-        "type": "Postgrado"
-      },
-      {
-        "title": "Postgrado Servicios de Red",
-        "issuer": "DESOFT",
-        "location": "La Habana, Cuba",
-        "date": "2010",
-        "type": "Postgrado"
-      },
-      {
-        "title": "Postgrado Control Interno",
-        "issuer": "PREGER",
-        "location": "La Habana, Cuba",
-        "date": "2008",
-        "type": "Postgrado"
-      },
-      {
-        "title": "Licenciatura en Matemática-Informática",
-        "issuer": "Instituto Superior Enrique José Varona",
-        "location": "La Habana, Cuba",
-        "date": "2002 – 2007",
-        "type": "Licenciatura"
-      }
+      { "title": "CAPT (Certified Advanced Penetration Tester)", "issuer": "HACKVISER", "date": "2026", "type": "Certificación" },
+      { "title": "CRTOM (Certified Red Team Operational Master)", "issuer": "RED TEAM LEADERS", "date": "2026", "type": "Certificación" },
+      { "title": "CPPS (Certified Professional Pentesting Specialist)", "issuer": "HACK & FIX", "date": "2025", "type": "Certificación" },
+      { "title": "C-IA (Certified AI Specialist)", "issuer": "BIG School", "date": "2025", "type": "Certificación" },
+      { "title": "C-AIA (Certified AI Automation)", "issuer": "BIG School", "date": "2025", "type": "Certificación" },
+      { "title": "Hacking Ético", "issuer": "MasterD", "date": "2023-2025", "type": "Certificación" },
+      { "title": "Scrum Foundation Learner", "issuer": "Certiprof", "date": "2025", "type": "Certificación" },
+      { "title": "AWS Cloud Quest: Cloud Practitioner", "issuer": "Amazon Web Services", "date": "2025", "type": "Certificación" },
+      { "title": "Google: Inteligencia Artificial y Productividad", "issuer": "Academy Santander", "date": "2025", "type": "Curso" },
+      { "title": "Cyberseguridad en el Teletrabajo", "issuer": "Google Digital Academy", "date": "2024", "type": "Curso" },
+      { "title": "Digitaliza tu Empresa con Google Tools", "issuer": "Google Digital Academy", "date": "2024", "type": "Curso" },
+      { "title": "Desarrollo de Apps Móviles", "issuer": "Google Digital Academy", "date": "2024", "type": "Curso" },
+      { "title": "Cybersecurity Awareness (CAPC)", "issuer": "Certiprof", "date": "2024", "type": "Certificación" },
+      { "title": "Postgrado MS-SQL Server 2005", "issuer": "DESOFT", "date": "2010", "type": "Postgrado" },
+      { "title": "Postgrado Exchange Server 2003", "issuer": "DESOFT", "date": "2010", "type": "Postgrado" },
+      { "title": "Postgrado ISA-Server 2004", "issuer": "DESOFT", "date": "2010", "type": "Postgrado" },
+      { "title": "Postgrado Active Directory", "issuer": "DESOFT", "date": "2010", "type": "Postgrado" },
+      { "title": "Postgrado Estructuras de Red Windows 2003", "issuer": "DESOFT", "date": "2010", "type": "Postgrado" },
+      { "title": "Postgrado Servicios de Red", "issuer": "DESOFT", "date": "2010", "type": "Postgrado" },
+      { "title": "Postgrado Control Interno", "issuer": "PREGER", "date": "2008", "type": "Postgrado" },
+      { "title": "Licenciatura en Matemática-Informática", "issuer": "Instituto Superior Enrique José Varona", "date": "2002-2007", "type": "Licenciatura" }
     ]
   },
   "contact": {
@@ -271,42 +132,12 @@
     "title": "Conecta Conmigo",
     "description": "Acceso a mis perfiles profesionales",
     "platforms": [
-      {
-        "name": "Hackviser",
-        "url": "https://app.hackviser.com/profile/AHByte",
-        "icon": "shield",
-        "description": "Plataforma de Ciberseguridad"
-      },
-      {
-        "name": "TryHackMe",
-        "url": "https://tryhackme.com/p/Hunt3r850",
-        "icon": "target",
-        "description": "Plataforma de Hacking Ético"
-      },
-      {
-        "name": "HackTheBox",
-        "url": "https://app.hackthebox.com/profile/1743244",
-        "icon": "box",
-        "description": "Plataforma de Pentesting"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/hunt3r850",
-        "icon": "code",
-        "description": "Repositorio de Código"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ahmed-alfonso-garcia/",
-        "icon": "briefcase",
-        "description": "Perfil Profesional"
-      },
-      {
-        "name": "X (Twitter)",
-        "url": "https://x.com/aalfonso850",
-        "icon": "twitter",
-        "description": "Red Social"
-      }
+      { "name": "Hackviser", "url": "https://app.hackviser.com/profile/AHByte", "icon": "shield", "description": "Plataforma de Ciberseguridad" },
+      { "name": "TryHackMe", "url": "https://tryhackme.com/p/Hunt3r850", "icon": "target", "description": "Plataforma de Hacking Ético" },
+      { "name": "HackTheBox", "url": "https://app.hackthebox.com/profile/1743244", "icon": "box", "description": "Plataforma de Pentesting" },
+      { "name": "GitHub", "url": "https://github.com/hunt3r850", "icon": "code", "description": "Repositorio de Código" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/ahmed-alfonso-garcia/", "icon": "briefcase", "description": "Perfil Profesional" },
+      { "name": "X (Twitter)", "url": "https://x.com/aalfonso850", "icon": "twitter", "description": "Red Social" }
     ]
   }
 }
