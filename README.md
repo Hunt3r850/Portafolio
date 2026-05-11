@@ -25,6 +25,7 @@ Portfolio profesional con estética de terminal Linux, diseñado para mostrar mi
 | **Google Fonts** | Fuentes JetBrains Mono y Fira Code |
 
 📂 Estructura del Proyecto
+
 Portafolio/
 ├── index.html # Archivo principal (todo en uno)
 ├── README.md # Documentación del proyecto
