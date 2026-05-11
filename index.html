@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist | Ethical Hacker | Security Auditor | Portfolio Profesional">
+    <meta name="keywords" content="ciberseguridad, pentesting, ethical hacking, auditoria seguridad, Kali Linux, red team">
+    <meta name="author" content="Lic. Ahmed O. Alfonso Garcia">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist">
+    <meta property="og:description" content="Especialista en Ciberseguridad con 18+ años de experiencia. Portfolio profesional.">
+    <meta property="og:type" content="website">
+    <title>Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --terminal-bg: #0d1117;
+            --text: #c9d1d9;
+            --green: #3fb950;
+            --blue: #58a6ff;
+            --purple: #bc8cff;
+            --orange: #d2991d;
+            --red: #f85149;
+            --cyan: #39d2c0;
+            --gray: #8b949e;
+            --border: #30363d;
+            --header-bg: #161b22;
+            --prompt: #3fb950;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.03) 0px,
+                rgba(0, 0, 0, 0.03) 1px,
+                transparent 1px,
+                transparent 3px
+            );
+            opacity: 0.3;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .terminal-header {
+            background: var(--header-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px 8px 0 0;
+            margin-top: 30px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .terminal-dot.red { background: #ff5f56; }
+        .terminal-dot.yellow { background: #ffbd2e; }
+        .terminal-dot.green { background: #27c93f; }
+
+        .terminal-title {
+            margin-left: 15px;
+            color: var(--gray);
+            font-size: 0.85rem;
+            flex: 1;
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 5px;
+            margin-left: auto;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--gray);
+            padding: 3px 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+        .lang-btn.active {
+            background: rgba(57, 210, 192, 0.2);
+            border-color: var(--cyan);
+            color: var(--cyan);
+            font-weight: bold;
+        }
+
+        .terminal-body {
+            background: var(--terminal-bg);
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .prompt {
+            color: var(--prompt);
+            font-weight: bold;
+        }
+
+        .prompt-symbol {
+            color: var(--text);
+        }
+
+        .command {
+            color: var(--cyan);
+        }
+
+        .output {
+            margin-bottom: 20px;
+        }
+
+        .output-name {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+
+        .output-title {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-header .prompt {
+            font-size: 1rem;
+        }
+
+        .section-header .file {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .stat-card {
+            background: rgba(48, 54, 61, 0.3);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            border-color: var(--green);
+            box-shadow: 0 0 15px rgba(63, 185, 80, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--green);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        .skills-category {
+            margin-bottom: 20px;
+        }
+
+        .skills-category h4 {
+            color: var(--purple);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            color: var(--blue);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .skill-tag.soft {
+            background: rgba(188, 140, 255, 0.1);
+            border-color: rgba(188, 140, 255, 0.3);
+            color: var(--purple);
+        }
+
+        .language-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .language-item {
+            color: var(--cyan);
+        }
+
+        .language-level {
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+
+        .timeline-item {
+            border-left: 2px solid var(--border);
+            padding-left: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "►";
+            color: var(--green);
+            position: absolute;
+            left: -9px;
+            top: 0;
+            font-size: 0.7rem;
+            background: var(--terminal-bg);
+            padding: 2px 0;
+        }
+
+        .timeline-title {
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        .timeline-company {
+            color: var(--orange);
+            font-size: 0.9rem;
+        }
+
+        .timeline-date {
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .timeline-desc li {
+            list-style-type: "• ";
+            margin-left: 15px;
+            color: var(--gray);
+        }
+
+        /* Estilos para la sección de proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .project-card {
+            background: rgba(48, 54, 61, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            border-color: var(--green);
+            box-shadow: 0 0 20px rgba(63, 185, 80, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--green);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .project-icon {
+            font-size: 1.5rem;
+        }
+
+        .project-name {
+            color: var(--cyan);
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .project-name:hover {
+            color: var(--green);
+            text-decoration: underline;
+        }
+
+        .project-version {
+            color: var(--gray);
+            font-size: 0.7rem;
+            background: rgba(48, 54, 61, 0.5);
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-left: auto;
+        }
+
+        .project-description {
+            color: var(--text);
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .project-tech-tag {
+            background: rgba(57, 210, 192, 0.1);
+            border: 1px solid rgba(57, 210, 192, 0.3);
+            color: var(--cyan);
+            padding: 2px 10px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+        }
+
+        .project-highlights {
+            margin-top: 10px;
+        }
+
+        .project-highlights li {
+            color: var(--gray);
+            font-size: 0.8rem;
+            list-style-type: "▸ ";
+            margin-left: 15px;
+            margin-bottom: 4px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 0.8rem;
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project-link:hover {
+            border-color: var(--blue);
+            background: rgba(88, 166, 255, 0.1);
+        }
+
+        .project-link.github {
+            color: var(--text);
+        }
+
+        .project-link.github:hover {
+            border-color: var(--text);
+            background: rgba(201, 209, 217, 0.1);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .cert-card {
+            background: rgba(48, 54, 61, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 12px;
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover {
+            border-color: var(--cyan);
+        }
+
+        .cert-name {
+            color: var(--cyan);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .cert-issuer {
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+
+        .cert-date {
+            color: var(--text);
+            font-size: 0.75rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--blue);
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            background: var(--header-bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--green);
+            box-shadow: 0 0 8px rgba(63, 185, 80, 0.15);
+        }
+
+        .btn-submit {
+            background: var(--green);
+            color: #000;
+            border: none;
+            padding: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #2ea043;
+            box-shadow: 0 0 15px rgba(63, 185, 80, 0.3);
+        }
+
+        .form-success {
+            display: none;
+            color: var(--green);
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .secure-email {
+            color: var(--cyan);
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin: 40px 0 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            .terminal-body {
+                padding: 15px;
+            }
+            .output-name {
+                font-size: 1.2rem;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+            .lang-selector {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                margin-top: 5px;
+            }
+            .project-header {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ===== HEADER TERMINAL ===== -->
+        <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">ahmed@portfolio:~$</span>
+            
+            <div class="lang-selector">
+                <button class="lang-btn active" data-lang="es" title="Español" aria-label="Cambiar a Español">ES</button>
+                <button class="lang-btn" data-lang="en" title="English" aria-label="Switch to English">EN</button>
+                <button class="lang-btn" data-lang="de" title="Deutsch" aria-label="Auf Deutsch umschalten">DE</button>
+                <button class="lang-btn" data-lang="it" title="Italiano" aria-label="Passa all'Italiano">IT</button>
+                <button class="lang-btn" data-lang="fr" title="Français" aria-label="Passer au Français">FR</button>
+            </div>
+        </div>
+        
+        <!-- ===== BODY TERMINAL ===== -->
+        <div class="terminal-body">
+            
+            <p><span class="prompt">root@ahmed-portfolio</span><span class="prompt-symbol">:</span><span class="command">~$</span> cat profile.sh</p>
+            
+            <div class="output">
+                <div class="output-name">Lic. Ahmed O. Alfonso Garcia</div>
+                <div class="output-title" data-i18n="subtitle">Cybersecurity Specialist | Ethical Hacker | Security Auditor</div>
+            </div>
+
+            <!-- ===== PERFIL PROFESIONAL ===== -->
+            <div class="section-header">
+                <span class="prompt">$</span> <span class="file">./about.sh</span>
+            </div>
+            
+            <div class="output">
+                <p data-i18n="about">Profesional informático con habilidades diversas y experiencia en el sector tecnológico, activo en TI desde 2007. Especializado en auditorías de seguridad, administración de redes y sistemas, asegurando la infraestructura tecnológica necesaria para el éxito de las organizaciones.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">18+</div>
+                    <div class="stat-label" data-i18n="stat1">Años de Experiencia</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label" data-i18n="stat2">Proyectos Completados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label" data-i18n="stat3">Certificaciones</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label" data-i18n="stat4">Idiomas</div>
+                </div>
+            </div>
+
+            <!-- ===== HABILIDADES ===== -->
+            <div class="section-header">
+                <span class="prompt">$</span> <span class="file">./skills.sh</span>
+            </div>
+
+            <div class="skills-category">
+                <h4 data-i18n="tech_skills_title">[Habilidades Técnicas]</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Pentesting</span>
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Metasploit</span>
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">Nmap</span>
+                    <span class="skill-tag">OWASP Top 10</span>
+                    <span class="skill-tag">Firewall Admin</span>
+                    <span class="skill-tag">IDS/IPS</span>
+                    <span class="skill-tag">SIEM</span>
+                    <span class="skill-tag">Windows Server</span>
+                    <span class="skill-tag">Linux Admin</span>
+                    <span class="skill-tag">Red Teaming</span>
+                    <span class="skill-tag">Análisis Forense</span>
+                    <span class="skill-tag">Autopsy</span>
+                    <span class="skill-tag">Volatility</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h4 data-i18n="soft_skills_title">[Habilidades Blandas]</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag soft" data-i18n="soft1">Liderazgo</span>
+                    <span class="skill-tag soft" data-i18n="soft2">Comunicación</span>
+                    <span class="skill-tag soft" data-i18n="soft3">Resolución de Problemas</span>
+                    <span class="skill-tag soft" data-i18n="soft4">Trabajo en Equipo</span>
+                    <span class="skill-tag soft" data-i18n="soft5">Pensamiento Crítico</span>
+                    <span class="skill-tag soft" data-i18n="soft6">Integridad</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h4 data-i18n="lang_title">[Idiomas]</h4>
+                <div class="language-list">
+                    <span class="language-item" data-i18n="lang_es">Español <span class="language-level">(Nativo)</span></span>
+                    <span class="language-item" data-i18n="lang_en">Inglés <span class="language-level">(B2)</span></span>
+                    <span class="language-item" data-i18n="lang_it">Italiano <span class="language-level">(B2)</span></span>
+                    <span class="language-item" data-i18n="lang_de">Alemán <span class="language-level">(A1)</span></span>
+                    <span class="language-item" data-i18n="lang_fr">Francés <span class="language-level">(A1)</span></span>
+                </div>
+            </div>
+
+            <!-- ===== PROYECTOS DESTACADOS ===== -->
+            <div class="section-header">
+                <span class="prompt">$</span> <span class="file">./projects.sh --featured</span>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- AegisTerminal -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🛡️</span>
+                        <a href="https://github.com/Hunt3r850/AegisTerminal" target="_blank" rel="noopener noreferrer" class="project-name">AegisTerminal</a>
+                        <span class="project-version">v1.6 Stable</span>
+                    </div>
+                    <p class="project-description" data-i18n="proj1_desc">Suite de automatización avanzada para Pentesting y Hacking Ético con interfaz CLI modular. Simplifica tareas de seguridad ofensiva con módulos integrados para reconocimiento, explotación y post-explotación.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Bash</span>
+                        <span class="project-tech-tag">Metasploit</span>
+                        <span class="project-tech-tag">Nmap</span>
+                        <span class="project-tech-tag">Hydra</span>
+                        <span class="project-tech-tag">Aircrack-ng</span>
+                        <span class="project-tech-tag">SET</span>
+                    </div>
+                    <ul class="project-highlights">
+                        <li data-i18n="proj1_hl1">8 módulos integrados: Wireless, Web, Brute Force, Exploitation, Mobile</li>
+                        <li data-i18n="proj1_hl2">Escaneo de vulnerabilidades web con Nikto y WPScan</li>
+                        <li data-i18n="proj1_hl3">Generación de payloads con msfvenom + listener automático</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/Hunt3r850/AegisTerminal" target="_blank" rel="noopener noreferrer" class="project-link github">📂 GitHub</a>
+                        <a href="https://github.com/Hunt3r850/AegisTerminal/blob/master/README.md" target="_blank" rel="noopener noreferrer" class="project-link">📖 Docs</a>
+                    </div>
+                </div>
+
+                <!-- KaliDefender -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🥷</span>
+                        <a href="https://github.com/Hunt3r850/KaliDefender" target="_blank" rel="noopener noreferrer" class="project-name">KaliDefender</a>
+                        <span class="project-version">v5.1.0</span>
+                    </div>
+                    <p class="project-description" data-i18n="proj2_desc">Sistema Dual Stealth/Attack para Pentesters. Transforma Kali Linux en plataforma de Red Teaming con máxima privacidad (Tor), C2 seguro (Tailscale/ZeroTier) y aislamiento de Metasploit con AppArmor.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Bash</span>
+                        <span class="project-tech-tag">Python</span>
+                        <span class="project-tech-tag">Tor</span>
+                        <span class="project-tech-tag">AppArmor</span>
+                        <span class="project-tech-tag">Tailscale</span>
+                        <span class="project-tech-tag">Metasploit</span>
+                        <span class="project-tech-tag">Fail2Ban</span>
+                    </div>
+                    <ul class="project-highlights">
+                        <li data-i18n="proj2_hl1">Modo Stealth: Navegación 100% anónima por Tor sin fugas DNS</li>
+                        <li data-i18n="proj2_hl2">Modo Attack: Handlers de Metasploit solo accesibles desde red privada</li>
+                        <li data-i18n="proj2_hl3">AppArmor: Metasploit aislado del sistema (no lee /etc/shadow)</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/Hunt3r850/KaliDefender" target="_blank" rel="noopener noreferrer" class="project-link github">📂 GitHub</a>
+                        <a href="https://github.com/Hunt3r850/KaliDefender/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="project-link">📖 Docs</a>
+                    </div>
+                </div>
+
+                <!-- CV Optimizer -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🤖</span>
+                        <a href="https://github.com/Hunt3r850/cv-optimizer-resumego" target="_blank" rel="noopener noreferrer" class="project-name">CV Optimizer (ResumeGO)</a>
+                        <span class="project-version">v2.0.2</span>
+                    </div>
+                    <p class="project-description" data-i18n="proj3_desc">Optimizador de CV con IA local (Llama 3 + Ollama) que transforma experiencias laborales en logros cuantificables. Soporte multilingüe (ES/EN/DE/IT), extracción de PDF y salida HTML ATS-friendly.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Python</span>
+                        <span class="project-tech-tag">Streamlit</span>
+                        <span class="project-tech-tag">Llama 3</span>
+                        <span class="project-tech-tag">Ollama</span>
+                        <span class="project-tech-tag">spaCy</span>
+                        <span class="project-tech-tag">Docker</span>
+                    </div>
+                    <ul class="project-highlights">
+                        <li data-i18n="proj3_hl1">IA local (Llama 3) para reescribir y mejorar puntos de experiencia</li>
+                        <li data-i18n="proj3_hl2">Detección automática de industria para optimización contextual</li>
+                        <li data-i18n="proj3_hl3">Salida HTML limpio diseñado para sistemas ATS</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/Hunt3r850/cv-optimizer-resumego" target="_blank" rel="noopener noreferrer" class="project-link github">📂 GitHub</a>
+                    </div>
+                </div>
+
+                <!-- CiberScan-Tool -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🔍</span>
+                        <a href="https://github.com/Hunt3r850/CiberScan-Tool" target="_blank" rel="noopener noreferrer" class="project-name">CiberScan-Tool</a>
+                        <span class="project-version">v2.0</span>
+                    </div>
+                    <p class="project-description" data-i18n="proj4_desc">Plataforma integral de ciberseguridad para escaneo automatizado de redes y detección de vulnerabilidades. Base de datos CVE actualizada con vulnerabilidades críticas de 2025-2026.</p>
+                    <div class="project-tech">
+                        <span class="project-tech-tag">Python</span>
+                        <span class="project-tech-tag">Nmap</span>
+                        <span class="project-tech-tag">CVE Database</span>
+                        <span class="project-tech-tag">Modular</span>
+                    </div>
+                    <ul class="project-highlights">
+                        <li data-i18n="proj4_hl1">Base de datos CVE actualizada (2025-2026): RCE, auth bypass</li>
+                        <li data-i18n="proj4_hl2">Estructura modular: network scanner, vuln scanner, web fuzzer</li>
+                        <li data-i18n="proj4_hl3">Instalación automatizada con setup.py y ejecución rápida</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/Hunt3r850/CiberScan-Tool" target="_blank" rel="noopener noreferrer" class="project-link github">📂 GitHub</a>
+                        <a href="https://ayjsnvym.manus.space" target="_blank" rel="noopener noreferrer" class="project-link">🌐 Portal Docs</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ===== EXPERIENCIA ===== -->
+            <div class="section-header">
+                <span class="prompt">$</span> <span class="file">./experience.log</span>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-title" data-i18n="exp1_title">Administrador de Redes</div>
+                <div class="timeline-company">Empresa de Inspección Técnica (MFK)</div>
+                <div class="timeline-date">2014 – 2019 | La Habana, Cuba</div>
+                <ul class="timeline-desc">
+                    <li data-i18n="exp1_desc1">Gestión y optimización de redes y sistemas empresariales</li>
+                    <li data-i18n="exp1_desc2">Implementación de medidas de seguridad informática</li>
+                    <li data-i18n="exp1_desc3">Mejora y aumento de la eficiencia operativa</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-title" data-i18n="exp2_title">Especialista en Seguridad Informática</div>
+                <div class="timeline-company">Instituto de Medicina Veterinaria</div>
+                <div class="timeline-date">2013 – 2014 | La Habana, Cuba</div>
+                <ul class="timeline-desc">
+                    <li data-i18n="exp2_desc1">Auditorías y evaluaciones de ciberseguridad</li>
+                    <li data-i18n="exp2_desc2">Identificación y mitigación de vulnerabilidades</li>
+                    <li data-i18n="exp2_desc3">Fortalecimiento de medidas de protección</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-title" data-i18n="exp3_title">Perito Informático Detective</div>
+                <div class="timeline-company">SEPSA</div>
+                <div class="timeline-date">2010 – 2012 | La Habana, Cuba</div>
+                <ul class="timeline-desc">
+                    <li data-i18n="exp3_desc1">Elaboración de dictámenes periciales</li>
+                    <li data-i18n="exp3_desc2">Testimonios en procesos judiciales</li>
+                    <li data-i18n="exp3_desc3">Análisis forense de sistemas</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-title" data-i18n="exp4_title">Auditor Adjunto de Informática</div>
+                <div class="timeline-company">Ministerio de Transporte</div>
+                <div class="timeline-date">2007 – 2010 | La Habana, Cuba</div>
+                <ul class="timeline-desc">
+                    <li data-i18n="exp4_desc1">Auditorías de seguridad TI</li>
+                    <li data-i18n="exp4_desc2">Identificación de vulnerabilidades críticas</li>
+                    <li data-i18n="exp4_desc3">Provisión de soluciones de seguridad</li>
+                </ul>
+            </div>
+
+            <!-- ===== CERTIFICACIONES ===== -->
+            <div class="section-header">
+                <span class="prompt">$</span> <span class="file">./certifications.log</span>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-name">CAPT</div>
+                    <div class="cert-issuer">Hackviser</div>
+                    <div class="cert-date">2026</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">CRTOM</div>
+                    <div class="cert-issuer">Red Team Leaders</div>
+                    <div class="cert-date">2026</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">CPPS</div>
+                    <div class="cert-issuer">Hack & Fix</div>
+                    <div class="cert-date">2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">C-IA / C-AIA</div>
+                    <div class="cert-issuer">BIG School</div>
+                    <div class="cert-date">2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert5_name">Hacking Ético</div>
+                    <div class="cert-issuer">MasterD</div>
+                    <div class="cert-date">2023-2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">AWS Cloud Practitioner</div>
+                    <div class="cert-issuer">Amazon Web Services</div>
+                    <div class="cert-date">2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">Scrum Foundation</div>
+                    <div class="cert-issuer">Certiprof</div>
+                    <div class="cert-date">2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert8_name">Lic. Matemática-Informática</div>
+                    <div class="cert-issuer">Instituto Superior E. J. Varona</div>
+                    <div class="cert-date">2002-2007</div>
+                </div>
+            </div>
+
+            <!-- ===== CONTACTO ===== -->
+            <div class="section-header">
+                <span class="prompt">$</span> <span class="file">./contact.sh</span>
+            </div>
+
+            <div class="output">
+                <p style="color: var(--gray); margin-bottom: 20px;"><span data-i18n="contact_intro">Disponible para nuevas oportunidades y colaboraciones. Contáctame a través de este formulario seguro</span> <span style="color: var(--green);" data-i18n="contact_encrypted">[cifrado extremo a extremo]</span>.</p>
+            </div>
+
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xdabyylp" method="POST">
+                
+                <div class="form-group">
+                    <label for="name" data-i18n="form_name">$ nombre:</label>
+                    <input type="text" id="name" name="name" data-i18n-placeholder="form_name_placeholder" placeholder="Tu nombre completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="_replyto" data-i18n="form_email">$ email:</label>
+                    <input type="email" id="_replyto" name="_replyto" data-i18n-placeholder="form_email_placeholder" placeholder="tu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject" data-i18n="form_subject">$ asunto:</label>
+                    <input type="text" id="subject" name="subject" data-i18n-placeholder="form_subject_placeholder" placeholder="Propuesta de colaboración, Consultoría, etc." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" data-i18n="form_message">$ mensaje:</label>
+                    <textarea id="message" name="message" rows="5" data-i18n-placeholder="form_message_placeholder" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <button type="submit" class="btn-submit" data-i18n="form_submit">$ enviar_mensaje --cifrado</button>
+                
+                <div id="form-success" class="form-success" data-i18n="form_success">
+                    ✔ Mensaje enviado exitosamente. Te responderé pronto.
+                </div>
+            </form>
+
+            <div class="secure-email">
+                <span style="color: var(--gray);" data-i18n="pgp">PGP Key disponible bajo solicitud</span>
+            </div>
+
+        </div><!-- /terminal-body -->
+        
+        <div class="footer">
+            <p>© 2026 Lic. Ahmed O. Alfonso Garcia | Cybersecurity Specialist</p>
+            <p style="margin-top: 5px; font-size: 0.7rem;" data-i18n="footer_design">Diseño inspirado en terminal • Hecho con código limpio</p>
+        </div>
+        
+    </div><!-- /container -->
+
+    <script>
+        // ===== SISTEMA DE TRADUCCIONES (5 idiomas + proyectos) =====
+        const translations = {
+            es: {
+                subtitle: "Especialista en Ciberseguridad | Hacker Ético | Auditor de Seguridad",
+                about: "Profesional informático con habilidades diversas y experiencia en el sector tecnológico, activo en TI desde 2007. Especializado en auditorías de seguridad, administración de redes y sistemas, asegurando la infraestructura tecnológica necesaria para el éxito de las organizaciones.",
+                stat1: "Años de Experiencia",
+                stat2: "Proyectos Completados",
+                stat3: "Certificaciones",
+                stat4: "Idiomas",
+                tech_skills_title: "[Habilidades Técnicas]",
+                soft_skills_title: "[Habilidades Blandas]",
+                lang_title: "[Idiomas]",
+                soft1: "Liderazgo",
+                soft2: "Comunicación",
+                soft3: "Resolución de Problemas",
+                soft4: "Trabajo en Equipo",
+                soft5: "Pensamiento Crítico",
+                soft6: "Integridad",
+                lang_es: "Español (Nativo)",
+                lang_en: "Inglés (B2)",
+                lang_it: "Italiano (B2)",
+                lang_de: "Alemán (A1)",
+                lang_fr: "Francés (A1)",
+                exp1_title: "Administrador de Redes",
+                exp1_desc1: "Gestión y optimización de redes y sistemas empresariales",
+                exp1_desc2: "Implementación de medidas de seguridad informática",
+                exp1_desc3: "Mejora y aumento de la eficiencia operativa",
+                exp2_title: "Especialista en Seguridad Informática",
+                exp2_desc1: "Auditorías y evaluaciones de ciberseguridad",
+                exp2_desc2: "Identificación y mitigación de vulnerabilidades",
+                exp2_desc3: "Fortalecimiento de medidas de protección",
+                exp3_title: "Perito Informático Detective",
+                exp3_desc1: "Elaboración de dictámenes periciales",
+                exp3_desc2: "Testimonios en procesos judiciales",
+                exp3_desc3: "Análisis forense de sistemas",
+                exp4_title: "Auditor Adjunto de Informática",
+                exp4_desc1: "Auditorías de seguridad TI",
+                exp4_desc2: "Identificación de vulnerabilidades críticas",
+                exp4_desc3: "Provisión de soluciones de seguridad",
+                cert5_name: "Hacking Ético",
+                cert8_name: "Lic. Matemática-Informática",
+                proj1_desc: "Suite de automatización avanzada para Pentesting y Hacking Ético con interfaz CLI modular. Simplifica tareas de seguridad ofensiva con módulos integrados para reconocimiento, explotación y post-explotación.",
+                proj1_hl1: "8 módulos integrados: Wireless, Web, Brute Force, Exploitation, Mobile",
+                proj1_hl2: "Escaneo de vulnerabilidades web con Nikto y WPScan",
+                proj1_hl3: "Generación de payloads con msfvenom + listener automático",
+                proj2_desc: "Sistema Dual Stealth/Attack para Pentesters. Transforma Kali Linux en plataforma de Red Teaming con máxima privacidad (Tor), C2 seguro (Tailscale/ZeroTier) y aislamiento de Metasploit con AppArmor.",
+                proj2_hl1: "Modo Stealth: Navegación 100% anónima por Tor sin fugas DNS",
+                proj2_hl2: "Modo Attack: Handlers de Metasploit solo accesibles desde red privada",
+                proj2_hl3: "AppArmor: Metasploit aislado del sistema (no lee /etc/shadow)",
+                proj3_desc: "Optimizador de CV con IA local (Llama 3 + Ollama) que transforma experiencias laborales en logros cuantificables. Soporte multilingüe (ES/EN/DE/IT), extracción de PDF y salida HTML ATS-friendly.",
+                proj3_hl1: "IA local (Llama 3) para reescribir y mejorar puntos de experiencia",
+                proj3_hl2: "Detección automática de industria para optimización contextual",
+                proj3_hl3: "Salida HTML limpio diseñado para sistemas ATS",
+                proj4_desc: "Plataforma integral de ciberseguridad para escaneo automatizado de redes y detección de vulnerabilidades. Base de datos CVE actualizada con vulnerabilidades críticas de 2025-2026.",
+                proj4_hl1: "Base de datos CVE actualizada (2025-2026): RCE, auth bypass",
+                proj4_hl2: "Estructura modular: network scanner, vuln scanner, web fuzzer",
+                proj4_hl3: "Instalación automatizada con setup.py y ejecución rápida",
+                contact_intro: "Disponible para nuevas oportunidades y colaboraciones. Contáctame a través de este formulario seguro",
+                contact_encrypted: "[cifrado extremo a extremo]",
+                form_name: "$ nombre:",
+                form_name_placeholder: "Tu nombre completo",
+                form_email: "$ email:",
+                form_email_placeholder: "tu@email.com",
+                form_subject: "$ asunto:",
+                form_subject_placeholder: "Propuesta de colaboración, Consultoría, etc.",
+                form_message: "$ mensaje:",
+                form_message_placeholder: "Escribe tu mensaje aquí...",
+                form_submit: "$ enviar_mensaje --cifrado",
+                form_success: "✔ Mensaje enviado exitosamente. Te responderé pronto.",
+                pgp: "PGP Key disponible bajo solicitud",
+                footer_design: "Diseño inspirado en terminal • Hecho con código limpio"
+            },
+            en: {
+                subtitle: "Cybersecurity Specialist | Ethical Hacker | Security Auditor",
+                about: "IT professional with diverse skills and experience in the technology sector, active in IT since 2007. Specialized in security audits, network and systems administration, ensuring the technological infrastructure necessary for organizational success.",
+                stat1: "Years of Experience",
+                stat2: "Projects Completed",
+                stat3: "Certifications",
+                stat4: "Languages",
+                tech_skills_title: "[Technical Skills]",
+                soft_skills_title: "[Soft Skills]",
+                lang_title: "[Languages]",
+                soft1: "Leadership",
+                soft2: "Communication",
+                soft3: "Problem Solving",
+                soft4: "Teamwork",
+                soft5: "Critical Thinking",
+                soft6: "Integrity",
+                lang_es: "Spanish (Native)",
+                lang_en: "English (B2)",
+                lang_it: "Italian (B2)",
+                lang_de: "German (A1)",
+                lang_fr: "French (A1)",
+                exp1_title: "Network Administrator",
+                exp1_desc1: "Management and optimization of enterprise networks and systems",
+                exp1_desc2: "Implementation of computer security measures",
+                exp1_desc3: "Improvement and increase of operational efficiency",
+                exp2_title: "IT Security Specialist",
+                exp2_desc1: "Cybersecurity audits and assessments",
+                exp2_desc2: "Identification and mitigation of vulnerabilities",
+                exp2_desc3: "Strengthening protection measures",
+                exp3_title: "Computer Forensic Detective",
+                exp3_desc1: "Preparation of expert reports",
+                exp3_desc2: "Testimony in judicial proceedings",
+                exp3_desc3: "Forensic analysis of systems",
+                exp4_title: "Assistant IT Auditor",
+                exp4_desc1: "IT security audits",
+                exp4_desc2: "Identification of critical vulnerabilities",
+                exp4_desc3: "Provision of security solutions",
+                cert5_name: "Ethical Hacking",
+                cert8_name: "B.Sc. Mathematics-Computer Science",
+                proj1_desc: "Advanced automation suite for Pentesting and Ethical Hacking with modular CLI interface. Simplifies offensive security tasks with integrated modules for reconnaissance, exploitation and post-exploitation.",
+                proj1_hl1: "8 integrated modules: Wireless, Web, Brute Force, Exploitation, Mobile",
+                proj1_hl2: "Web vulnerability scanning with Nikto and WPScan",
+                proj1_hl3: "Payload generation with msfvenom + automatic listener",
+                proj2_desc: "Dual Stealth/Attack System for Pentesters. Transforms Kali Linux into a Red Teaming platform with maximum privacy (Tor), secure C2 (Tailscale/ZeroTier) and Metasploit isolation with AppArmor.",
+                proj2_hl1: "Stealth Mode: 100% anonymous browsing via Tor without DNS leaks",
+                proj2_hl2: "Attack Mode: Metasploit handlers only accessible from private network",
+                proj2_hl3: "AppArmor: Metasploit isolated from system (cannot read /etc/shadow)",
+                proj3_desc: "CV optimizer with local AI (Llama 3 + Ollama) that transforms work experiences into quantifiable achievements. Multilingual support (ES/EN/DE/IT), PDF extraction and ATS-friendly HTML output.",
+                proj3_hl1: "Local AI (Llama 3) to rewrite and improve experience bullet points",
+                proj3_hl2: "Automatic industry detection for contextual optimization",
+                proj3_hl3: "Clean HTML output designed for ATS systems",
+                proj4_desc: "Comprehensive cybersecurity platform for automated network scanning and vulnerability detection. Updated CVE database with critical 2025-2026 vulnerabilities.",
+                proj4_hl1: "Updated CVE database (2025-2026): RCE, auth bypass",
+                proj4_hl2: "Modular structure: network scanner, vuln scanner, web fuzzer",
+                proj4_hl3: "Automated installation with setup.py and quick execution",
+                contact_intro: "Available for new opportunities and collaborations. Contact me through this secure form",
+                contact_encrypted: "[end-to-end encrypted]",
+                form_name: "$ name:",
+                form_name_placeholder: "Your full name",
+                form_email: "$ email:",
+                form_email_placeholder: "you@email.com",
+                form_subject: "$ subject:",
+                form_subject_placeholder: "Collaboration proposal, Consulting, etc.",
+                form_message: "$ message:",
+                form_message_placeholder: "Write your message here...",
+                form_submit: "$ send_message --encrypted",
+                form_success: "✔ Message sent successfully. I will respond soon.",
+                pgp: "PGP Key available upon request",
+                footer_design: "Terminal-inspired design • Made with clean code"
+            },
+            de: {
+                subtitle: "Cybersicherheitsspezialist | Ethischer Hacker | Sicherheitsauditor",
+                about: "IT-Fachmann mit vielfältigen Fähigkeiten und Erfahrung im Technologiesektor, aktiv in der IT seit 2007. Spezialisiert auf Sicherheitsaudits, Netzwerk- und Systemadministration, um die technologische Infrastruktur für den Erfolg von Organisationen zu gewährleisten.",
+                stat1: "Jahre Erfahrung",
+                stat2: "Abgeschlossene Projekte",
+                stat3: "Zertifizierungen",
+                stat4: "Sprachen",
+                tech_skills_title: "[Technische Fähigkeiten]",
+                soft_skills_title: "[Soft Skills]",
+                lang_title: "[Sprachen]",
+                soft1: "Führung",
+                soft2: "Kommunikation",
+                soft3: "Problemlösung",
+                soft4: "Teamarbeit",
+                soft5: "Kritisches Denken",
+                soft6: "Integrität",
+                lang_es: "Spanisch (Muttersprache)",
+                lang_en: "Englisch (B2)",
+                lang_it: "Italienisch (B2)",
+                lang_de: "Deutsch (A1)",
+                lang_fr: "Französisch (A1)",
+                exp1_title: "Netzwerkadministrator",
+                exp1_desc1: "Verwaltung und Optimierung von Unternehmensnetzwerken und -systemen",
+                exp1_desc2: "Implementierung von Computersicherheitsmaßnahmen",
+                exp1_desc3: "Verbesserung und Steigerung der Betriebseffizienz",
+                exp2_title: "IT-Sicherheitsspezialist",
+                exp2_desc1: "Cybersicherheitsaudits und -bewertungen",
+                exp2_desc2: "Identifizierung und Minderung von Schwachstellen",
+                exp2_desc3: "Stärkung der Schutzmaßnahmen",
+                exp3_title: "IT-Forensik-Detektiv",
+                exp3_desc1: "Erstellung von Sachverständigengutachten",
+                exp3_desc2: "Zeugenaussagen in Gerichtsverfahren",
+                exp3_desc3: "Forensische Analyse von Systemen",
+                exp4_title: "Assistenz-IT-Auditor",
+                exp4_desc1: "IT-Sicherheitsaudits",
+                exp4_desc2: "Identifizierung kritischer Schwachstellen",
+                exp4_desc3: "Bereitstellung von Sicherheitslösungen",
+                cert5_name: "Ethisches Hacking",
+                cert8_name: "B.Sc. Mathematik-Informatik",
+                proj1_desc: "Fortschrittliche Automatisierungssuite für Pentesting und Ethical Hacking mit modularer CLI-Schnittstelle. Vereinfacht offensive Sicherheitsaufgaben mit integrierten Modulen.",
+                proj1_hl1: "8 integrierte Module: Wireless, Web, Brute Force, Exploitation, Mobile",
+                proj1_hl2: "Web-Schwachstellenscanning mit Nikto und WPScan",
+                proj1_hl3: "Payload-Generierung mit msfvenom + automatischer Listener",
+                proj2_desc: "Duales Stealth/Attack-System für Pentester. Verwandelt Kali Linux in eine Red Teaming-Plattform mit maximaler Privatsphäre (Tor) und Metasploit-Isolierung.",
+                proj2_hl1: "Stealth-Modus: 100% anonymes Browsen über Tor ohne DNS-Lecks",
+                proj2_hl2: "Attack-Modus: Metasploit-Handler nur über privates Netzwerk",
+                proj2_hl3: "AppArmor: Metasploit vom System isoliert",
+                proj3_desc: "CV-Optimierer mit lokaler KI (Llama 3 + Ollama). Mehrsprachige Unterstützung (ES/EN/DE/IT), PDF-Extraktion und ATS-freundliche HTML-Ausgabe.",
+                proj3_hl1: "Lokale KI (Llama 3) zum Umschreiben von Erfahrungspunkten",
+                proj3_hl2: "Automatische Branchenerkennung für kontextbezogene Optimierung",
+                proj3_hl3: "Saubere HTML-Ausgabe für ATS-Systeme",
+                proj4_desc: "Umfassende Cybersicherheitsplattform für automatisiertes Netzwerkscanning. Aktualisierte CVE-Datenbank mit kritischen Schwachstellen 2025-2026.",
+                proj4_hl1: "Aktualisierte CVE-Datenbank (2025-2026): RCE, Auth-Bypass",
+                proj4_hl2: "Modulare Struktur: Netzwerkscanner, Schwachstellenscanner, Web-Fuzzer",
+                proj4_hl3: "Automatisierte Installation mit setup.py",
+                contact_intro: "Verfügbar für neue Möglichkeiten und Zusammenarbeit. Kontaktieren Sie mich über dieses sichere Formular",
+                contact_encrypted: "[Ende-zu-Ende-verschlüsselt]",
+                form_name: "$ name:",
+                form_name_placeholder: "Ihr vollständiger Name",
+                form_email: "$ email:",
+                form_email_placeholder: "sie@email.com",
+                form_subject: "$ betreff:",
+                form_subject_placeholder: "Kooperationsvorschlag, Beratung, etc.",
+                form_message: "$ nachricht:",
+                form_message_placeholder: "Schreiben Sie Ihre Nachricht hier...",
+                form_submit: "$ nachricht_senden --verschlüsselt",
+                form_success: "✔ Nachricht erfolgreich gesendet. Ich werde bald antworten.",
+                pgp: "PGP-Schlüssel auf Anfrage erhältlich",
+                footer_design: "Terminal-inspiriertes Design • Mit sauberem Code erstellt"
+            },
+            it: {
+                subtitle: "Specialista in Cybersecurity | Hacker Etico | Revisore di Sicurezza",
+                about: "Professionista IT con competenze diversificate ed esperienza nel settore tecnologico, attivo nell'IT dal 2007. Specializzato in audit di sicurezza, amministrazione di reti e sistemi.",
+                stat1: "Anni di Esperienza",
+                stat2: "Progetti Completati",
+                stat3: "Certificazioni",
+                stat4: "Lingue",
+                tech_skills_title: "[Competenze Tecniche]",
+                soft_skills_title: "[Competenze Trasversali]",
+                lang_title: "[Lingue]",
+                soft1: "Leadership",
+                soft2: "Comunicazione",
+                soft3: "Risoluzione Problemi",
+                soft4: "Lavoro di Squadra",
+                soft5: "Pensiero Critico",
+                soft6: "Integrità",
+                lang_es: "Spagnolo (Madrelingua)",
+                lang_en: "Inglese (B2)",
+                lang_it: "Italiano (B2)",
+                lang_de: "Tedesco (A1)",
+                lang_fr: "Francese (A1)",
+                exp1_title: "Amministratore di Rete",
+                exp1_desc1: "Gestione e ottimizzazione di reti e sistemi aziendali",
+                exp1_desc2: "Implementazione di misure di sicurezza informatica",
+                exp1_desc3: "Miglioramento e aumento dell'efficienza operativa",
+                exp2_title: "Specialista in Sicurezza Informatica",
+                exp2_desc1: "Audit e valutazioni di cybersecurity",
+                exp2_desc2: "Identificazione e mitigazione delle vulnerabilità",
+                exp2_desc3: "Rafforzamento delle misure di protezione",
+                exp3_title: "Detective Informatico Forense",
+                exp3_desc1: "Preparazione di perizie",
+                exp3_desc2: "Testimonianze in procedimenti giudiziari",
+                exp3_desc3: "Analisi forense dei sistemi",
+                exp4_title: "Assistente Revisore Informatico",
+                exp4_desc1: "Audit di sicurezza IT",
+                exp4_desc2: "Identificazione di vulnerabilità critiche",
+                exp4_desc3: "Fornitura di soluzioni di sicurezza",
+                cert5_name: "Hacking Etico",
+                cert8_name: "Laurea in Matematica-Informatica",
+                proj1_desc: "Suite di automazione avanzata per Pentesting e Hacking Etico con interfaccia CLI modulare. Semplifica le attività di sicurezza offensiva con moduli integrati.",
+                proj1_hl1: "8 moduli integrati: Wireless, Web, Brute Force, Exploitation, Mobile",
+                proj1_hl2: "Scansione vulnerabilità web con Nikto e WPScan",
+                proj1_hl3: "Generazione payload con msfvenom + listener automatico",
+                proj2_desc: "Sistema Dual Stealth/Attack per Pentesters. Trasforma Kali Linux con massima privacy (Tor) e isolamento Metasploit con AppArmor.",
+                proj2_hl1: "Modalità Stealth: Navigazione 100% anonima via Tor",
+                proj2_hl2: "Modalità Attack: Handler Metasploit solo da rete privata",
+                proj2_hl3: "AppArmor: Metasploit isolato dal sistema",
+                proj3_desc: "Ottimizzatore CV con IA locale (Llama 3 + Ollama). Supporto multilingue (ES/EN/DE/IT) e output HTML ottimizzato per ATS.",
+                proj3_hl1: "IA locale (Llama 3) per riscrivere punti esperienza",
+                proj3_hl2: "Rilevamento automatico del settore",
+                proj3_hl3: "Output HTML pulito per sistemi ATS",
+                proj4_desc: "Piattaforma completa per scansione automatizzata di reti. Database CVE aggiornato con vulnerabilità critiche 2025-2026.",
+                proj4_hl1: "Database CVE aggiornato (2025-2026): RCE, auth bypass",
+                proj4_hl2: "Struttura modulare: scanner di rete, scanner vuln, web fuzzer",
+                proj4_hl3: "Installazione automatizzata con setup.py",
+                contact_intro: "Disponibile per nuove opportunità e collaborazioni. Contattami tramite questo modulo sicuro",
+                contact_encrypted: "[crittografia end-to-end]",
+                form_name: "$ nome:",
+                form_name_placeholder: "Il tuo nome completo",
+                form_email: "$ email:",
+                form_email_placeholder: "tu@email.com",
+                form_subject: "$ oggetto:",
+                form_subject_placeholder: "Proposta di collaborazione, Consulenza, ecc.",
+                form_message: "$ messaggio:",
+                form_message_placeholder: "Scrivi il tuo messaggio qui...",
+                form_submit: "$ invia_messaggio --crittografato",
+                form_success: "✔ Messaggio inviato con successo. Risponderò presto.",
+                pgp: "Chiave PGP disponibile su richiesta",
+                footer_design: "Design ispirato al terminale • Realizzato con codice pulito"
+            },
+            fr: {
+                subtitle: "Spécialiste en Cybersécurité | Hacker Éthique | Auditeur de Sécurité",
+                about: "Professionnel de l'informatique avec des compétences diversifiées et de l'expérience dans le secteur technologique, actif dans l'IT depuis 2007. Spécialisé dans les audits de sécurité, l'administration des réseaux et des systèmes.",
+                stat1: "Années d'Expérience",
+                stat2: "Projets Réalisés",
+                stat3: "Certifications",
+                stat4: "Langues",
+                tech_skills_title: "[Compétences Techniques]",
+                soft_skills_title: "[Compétences Transversales]",
+                lang_title: "[Langues]",
+                soft1: "Leadership",
+                soft2: "Communication",
+                soft3: "Résolution de Problèmes",
+                soft4: "Travail d'Équipe",
+                soft5: "Pensée Critique",
+                soft6: "Intégrité",
+                lang_es: "Espagnol (Natif)",
+                lang_en: "Anglais (B2)",
+                lang_it: "Italien (B2)",
+                lang_de: "Allemand (A1)",
+                lang_fr: "Français (A1)",
+                exp1_title: "Administrateur Réseau",
+                exp1_desc1: "Gestion et optimisation des réseaux et systèmes d'entreprise",
+                exp1_desc2: "Mise en œuvre de mesures de sécurité informatique",
+                exp1_desc3: "Amélioration et augmentation de l'efficacité opérationnelle",
+                exp2_title: "Spécialiste en Sécurité Informatique",
+                exp2_desc1: "Audits et évaluations de cybersécurité",
+                exp2_desc2: "Identification et atténuation des vulnérabilités",
+                exp2_desc3: "Renforcement des mesures de protection",
+                exp3_title: "Détective en Informatique Légale",
+                exp3_desc1: "Préparation de rapports d'expertise",
+                exp3_desc2: "Témoignages dans les procédures judiciaires",
+                exp3_desc3: "Analyse médico-légale des systèmes",
+                exp4_title: "Auditeur Informatique Adjoint",
+                exp4_desc1: "Audits de sécurité informatique",
+                exp4_desc2: "Identification des vulnérabilités critiques",
+                exp4_desc3: "Fourniture de solutions de sécurité",
+                cert5_name: "Hacking Éthique",
+                cert8_name: "Licence Mathématiques-Informatique",
+                proj1_desc: "Suite d'automatisation avancée pour le Pentesting et le Hacking Éthique avec interface CLI modulaire. Simplifie les tâches de sécurité offensive avec des modules intégrés.",
+                proj1_hl1: "8 modules intégrés: Wireless, Web, Brute Force, Exploitation, Mobile",
+                proj1_hl2: "Scan de vulnérabilités web avec Nikto et WPScan",
+                proj1_hl3: "Génération de payloads avec msfvenom + listener automatique",
+                proj2_desc: "Système Dual Stealth/Attack pour Pentesters. Transforme Kali Linux avec confidentialité maximale (Tor) et isolation Metasploit avec AppArmor.",
+                proj2_hl1: "Mode Stealth: Navigation 100% anonyme via Tor",
+                proj2_hl2: "Mode Attack: Handlers Metasploit uniquement via réseau privé",
+                proj2_hl3: "AppArmor: Metasploit isolé du système",
+                proj3_desc: "Optimiseur de CV avec IA locale (Llama 3 + Ollama). Support multilingue (ES/EN/DE/IT) et sortie HTML optimisée ATS.",
+                proj3_hl1: "IA locale (Llama 3) pour réécrire les points d'expérience",
+                proj3_hl2: "Détection automatique du secteur d'activité",
+                proj3_hl3: "Sortie HTML propre pour systèmes ATS",
+                proj4_desc: "Plateforme complète de cybersécurité pour le scan automatisé de réseaux. Base de données CVE à jour avec vulnérabilités critiques 2025-2026.",
+                proj4_hl1: "Base CVE à jour (2025-2026): RCE, contournement d'auth",
+                proj4_hl2: "Structure modulaire: scanner réseau, scanner vulnérabilités, fuzzer web",
+                proj4_hl3: "Installation automatisée avec setup.py",
+                contact_intro: "Disponible pour de nouvelles opportunités et collaborations. Contactez-moi via ce formulaire sécurisé",
+                contact_encrypted: "[chiffré de bout en bout]",
+                form_name: "$ nom:",
+                form_name_placeholder: "Votre nom complet",
+                form_email: "$ email:",
+                form_email_placeholder: "vous@email.com",
+                form_subject: "$ sujet:",
+                form_subject_placeholder: "Proposition de collaboration, Conseil, etc.",
+                form_message: "$ message:",
+                form_message_placeholder: "Écrivez votre message ici...",
+                form_submit: "$ envoyer_message --chiffré",
+                form_success: "✔ Message envoyé avec succès. Je répondrai bientôt.",
+                pgp: "Clé PGP disponible sur demande",
+                footer_design: "Design inspiré du terminal • Fait avec du code propre"
+            }
+        };
+
+        function getBrowserLang() {
+            const lang = navigator.language || navigator.userLanguage;
+            const shortLang = lang.split('-')[0];
+            if (translations[shortLang]) return shortLang;
+            return 'es';
+        }
+
+        function setLanguage(lang) {
+            localStorage.setItem('portfolio-lang', lang);
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            updateLanguageLabels(lang);
+        }
+
+        function updateLanguageLabels(lang) {
+            const labels = {
+                es: { native: 'Nativo', b2: 'B2', a1: 'A1' },
+                en: { native: 'Native', b2: 'B2', a1: 'A1' },
+                de: { native: 'Muttersprache', b2: 'B2', a1: 'A1' },
+                it: { native: 'Madrelingua', b2: 'B2', a1: 'A1' },
+                fr: { native: 'Natif', b2: 'B2', a1: 'A1' }
+            };
+            
+            document.querySelectorAll('.language-item').forEach(item => {
+                const text = item.textContent;
+                if (text.match(/\((Nativo|Native|Muttersprache|Madrelingua|Natif)\)/)) {
+                    item.innerHTML = item.innerHTML.replace(/\(.*\)/, `(${labels[lang].native})`);
+                }
+            });
+        }
+
+        function init() {
+            const savedLang = localStorage.getItem('portfolio-lang');
+            const initialLang = savedLang || getBrowserLang();
+            setLanguage(initialLang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    setLanguage(this.getAttribute('data-lang'));
+                });
+            });
+        }
+
+        // Manejo del formulario con Formspree
+        const form = document.getElementById('contact-form');
+        const successMsg = document.getElementById('form-success');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    form.style.display = 'none';
+                    successMsg.style.display = 'block';
+                } else {
+                    const lang = localStorage.getItem('portfolio-lang') || 'es';
+                    const msgs = {
+                        es: 'Hubo un error. Intenta de nuevo.',
+                        en: 'There was an error. Try again.',
+                        de: 'Es gab einen Fehler. Versuchen Sie es erneut.',
+                        it: "C'è stato un errore. Riprova.",
+                        fr: "Une erreur s'est produite. Réessayez."
+                    };
+                    alert(msgs[lang] || msgs.es);
+                }
+            } catch (error) {
+                const lang = localStorage.getItem('portfolio-lang') || 'es';
+                const msgs = {
+                    es: 'Error de conexión. Verifica tu internet.',
+                    en: 'Connection error. Check your internet.',
+                    de: 'Verbindungsfehler. Überprüfen Sie Ihr Internet.',
+                    it: 'Errore di connessione. Controlla internet.',
+                    fr: 'Erreur de connexion. Vérifiez votre connexion.'
+                };
+                alert(msgs[lang] || msgs.es);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
