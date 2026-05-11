@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist | Ethical Hacker | Security Auditor | Portfolio Profesional">
-    <meta name="keywords" content="ciberseguridad, pentesting, ethical hacking, auditoria seguridad, Kali Linux, red team">
+    <meta name="description" content="Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist con 18+ años de experiencia. Especialista en Pentesting, Ethical Hacking, Auditoría de Seguridad y Red Teaming. Portfolio profesional con proyectos y certificaciones.">
+    <meta name="keywords" content="ciberseguridad, pentesting, ethical hacking, auditoria seguridad, Kali Linux, red team, cybersecurity specialist, seguridad informática, penetration testing, vulnerability assessment">
     <meta name="author" content="Lic. Ahmed O. Alfonso Garcia">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist">
-    <meta property="og:description" content="Especialista en Ciberseguridad con 18+ años de experiencia. Portfolio profesional.">
+    <meta property="og:title" content="Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist | Portfolio Profesional">
+    <meta property="og:description" content="Especialista en Ciberseguridad con 18+ años de experiencia. Portfolio profesional con proyectos, certificaciones y formulario de contacto seguro.">
     <meta property="og:type" content="website">
-    <title>Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist</title>
+    <meta property="og:url" content="https://hunt3r850.github.io/Portafolio/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist">
+    <meta name="twitter:description" content="Especialista en Ciberseguridad | Ethical Hacker | Security Auditor | 18+ años de experiencia">
+    <title>Lic. Ahmed O. Alfonso Garcia - Cybersecurity Specialist | Portfolio Profesional</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +71,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -112,9 +116,9 @@
             background: transparent;
             border: 1px solid var(--border);
             color: var(--gray);
-            padding: 3px 8px;
+            padding: 4px 10px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             cursor: pointer;
             border-radius: 3px;
             transition: all 0.2s;
@@ -137,7 +141,7 @@
             border: 1px solid var(--border);
             border-top: none;
             border-radius: 0 0 8px 8px;
-            padding: 25px;
+            padding: 30px;
             margin-bottom: 30px;
         }
 
@@ -159,16 +163,99 @@
         }
 
         .output-name {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: var(--text);
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .output-title {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 20px;
+        }
+
+        .availability-badge {
+            display: inline-block;
+            background: rgba(63, 185, 80, 0.15);
+            border: 1px solid var(--green);
+            color: var(--green);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Redes Sociales */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(48, 54, 61, 0.3);
+            border: 1px solid var(--border);
+            color: var(--text);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .social-link:hover {
+            border-color: var(--cyan);
+            background: rgba(57, 210, 192, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .social-link.linkedin:hover {
+            border-color: #0a66c2;
+            background: rgba(10, 102, 194, 0.15);
+        }
+
+        .social-link.github:hover {
+            border-color: #f0f6fc;
+            background: rgba(240, 246, 252, 0.1);
+        }
+
+        .social-link.twitter:hover {
+            border-color: #1da1f2;
+            background: rgba(29, 161, 242, 0.15);
+        }
+
+        .social-link.tryhackme:hover {
+            border-color: #c1111f;
+            background: rgba(193, 17, 31, 0.15);
+        }
+
+        .social-link.hackthebox:hover {
+            border-color: #9fef00;
+            background: rgba(159, 239, 0, 0.1);
+        }
+
+        .social-link.hackviser:hover {
+            border-color: #6c5ce7;
+            background: rgba(108, 92, 231, 0.15);
         }
 
         .section-header {
@@ -189,9 +276,44 @@
             font-weight: bold;
         }
 
+        .cv-download-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .cv-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green);
+            color: #000;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .cv-download-btn:hover {
+            background: #2ea043;
+            box-shadow: 0 0 20px rgba(63, 185, 80, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .cv-download-btn small {
+            display: block;
+            font-size: 0.65rem;
+            opacity: 0.7;
+            font-weight: normal;
+        }
+
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 15px;
             margin: 25px 0;
         }
@@ -200,7 +322,7 @@
             background: rgba(48, 54, 61, 0.3);
             border: 1px solid var(--border);
             border-radius: 6px;
-            padding: 15px;
+            padding: 18px;
             text-align: center;
             transition: all 0.3s;
         }
@@ -208,6 +330,7 @@
         .stat-card:hover {
             border-color: var(--green);
             box-shadow: 0 0 15px rgba(63, 185, 80, 0.1);
+            transform: translateY(-3px);
         }
 
         .stat-number {
@@ -242,9 +365,15 @@
             background: rgba(88, 166, 255, 0.1);
             border: 1px solid rgba(88, 166, 255, 0.3);
             color: var(--blue);
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 4px;
             font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: rgba(88, 166, 255, 0.2);
+            border-color: var(--blue);
         }
 
         .skill-tag.soft {
@@ -253,10 +382,15 @@
             color: var(--purple);
         }
 
+        .skill-tag.soft:hover {
+            background: rgba(188, 140, 255, 0.2);
+            border-color: var(--purple);
+        }
+
         .language-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
             margin-top: 5px;
         }
 
@@ -272,7 +406,7 @@
         .timeline-item {
             border-left: 2px solid var(--border);
             padding-left: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             position: relative;
         }
 
@@ -290,6 +424,7 @@
         .timeline-title {
             color: var(--blue);
             font-weight: bold;
+            font-size: 1rem;
         }
 
         .timeline-company {
@@ -314,7 +449,6 @@
             color: var(--gray);
         }
 
-        /* Estilos para la sección de proyectos */
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -326,7 +460,7 @@
             background: rgba(48, 54, 61, 0.2);
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 20px;
+            padding: 22px;
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
@@ -392,7 +526,7 @@
             color: var(--text);
             font-size: 0.85rem;
             margin-bottom: 12px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .project-tech {
@@ -406,21 +540,21 @@
             background: rgba(57, 210, 192, 0.1);
             border: 1px solid rgba(57, 210, 192, 0.3);
             color: var(--cyan);
-            padding: 2px 10px;
+            padding: 3px 10px;
             border-radius: 3px;
             font-size: 0.7rem;
         }
 
         .project-highlights {
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .project-highlights li {
             color: var(--gray);
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             list-style-type: "▸ ";
             margin-left: 15px;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
         }
 
         .project-links {
@@ -435,7 +569,7 @@
             text-decoration: none;
             font-size: 0.8rem;
             border: 1px solid var(--border);
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 4px;
             transition: all 0.3s;
             display: inline-flex;
@@ -459,7 +593,7 @@
 
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 12px;
         }
 
@@ -467,12 +601,13 @@
             background: rgba(48, 54, 61, 0.2);
             border: 1px solid var(--border);
             border-radius: 6px;
-            padding: 12px;
+            padding: 14px;
             transition: all 0.3s;
         }
 
         .cert-card:hover {
             border-color: var(--cyan);
+            background: rgba(48, 54, 61, 0.4);
         }
 
         .cert-name {
@@ -510,7 +645,7 @@
             background: var(--header-bg);
             border: 1px solid var(--border);
             color: var(--text);
-            padding: 10px;
+            padding: 12px;
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             border-radius: 4px;
@@ -528,7 +663,7 @@
             background: var(--green);
             color: #000;
             border: none;
-            padding: 12px;
+            padding: 14px;
             font-family: 'JetBrains Mono', monospace;
             font-weight: bold;
             font-size: 1rem;
@@ -539,7 +674,7 @@
 
         .btn-submit:hover {
             background: #2ea043;
-            box-shadow: 0 0 15px rgba(63, 185, 80, 0.3);
+            box-shadow: 0 0 20px rgba(63, 185, 80, 0.3);
         }
 
         .form-success {
@@ -548,6 +683,7 @@
             text-align: center;
             padding: 20px;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         .secure-email {
@@ -571,7 +707,7 @@
                 padding: 15px;
             }
             .output-name {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -586,6 +722,17 @@
             }
             .project-header {
                 flex-wrap: wrap;
+            }
+            .cv-download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .social-links {
+                flex-direction: column;
+            }
+            .social-link {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -615,8 +762,56 @@
             <p><span class="prompt">root@ahmed-portfolio</span><span class="prompt-symbol">:</span><span class="command">~$</span> cat profile.sh</p>
             
             <div class="output">
-                <div class="output-name">Lic. Ahmed O. Alfonso Garcia</div>
-                <div class="output-title" data-i18n="subtitle">Cybersecurity Specialist | Ethical Hacker | Security Auditor</div>
+                <h1 class="output-name">Lic. Ahmed O. Alfonso Garcia</h1>
+                <div class="output-title" data-i18n="subtitle">Cybersecurity Specialist | Ethical Hacker | Security Auditor | Red Team Operator</div>
+                <div class="availability-badge" data-i18n="available">⚡ Disponible para nuevos proyectos</div>
+            </div>
+
+            <!-- ===== REDES SOCIALES ===== -->
+            <div class="social-links">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/ahmed-alfonso-garcia/" target="_blank" rel="noopener noreferrer" class="social-link linkedin" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+                
+                <!-- GitHub -->
+                <a href="https://github.com/hunt3r850" target="_blank" rel="noopener noreferrer" class="social-link github" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    GitHub
+                </a>
+                
+                <!-- TryHackMe -->
+                <a href="https://tryhackme.com/p/Hunt3r850" target="_blank" rel="noopener noreferrer" class="social-link tryhackme" title="TryHackMe">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zM5.5 16.5v-5l2.5 1.5v2l-2.5-1.5zm2.5-2.5l4-2v4l-4-2zm6.5 2.5v-5l2.5 1.5v2l-2.5-1.5z"/></svg>
+                    TryHackMe
+                </a>
+                
+                <!-- Hack The Box -->
+                <a href="https://app.hackthebox.com/profile/1743244" target="_blank" rel="noopener noreferrer" class="social-link hackthebox" title="Hack The Box">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/></svg>
+                    Hack The Box
+                </a>
+                
+                <!-- Hackviser -->
+                <a href="https://app.hackviser.com/profile/AHByte" target="_blank" rel="noopener noreferrer" class="social-link hackviser" title="Hackviser">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2zm0 2.5L5 8v8l7 3.5L19 16V8l-7-3.5z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Hackviser
+                </a>
+                
+                <!-- X (Twitter) -->
+                <a href="https://x.com/aalfonso850" target="_blank" rel="noopener noreferrer" class="social-link twitter" title="X (Twitter)">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    X
+                </a>
+            </div>
+
+            <!-- ===== CV DOWNLOAD ===== -->
+            <div class="cv-download-container">
+                <a href="CV_Ahmed_Alfonso_Garcia.pdf" download class="cv-download-btn" data-i18n="download_cv">
+                    📄 Descargar CV en PDF
+                    <small data-i18n="download_cv_small">Versión actualizada 2026 • ATS-Friendly</small>
+                </a>
             </div>
 
             <!-- ===== PERFIL PROFESIONAL ===== -->
@@ -625,7 +820,7 @@
             </div>
             
             <div class="output">
-                <p data-i18n="about">Profesional informático con habilidades diversas y experiencia en el sector tecnológico, activo en TI desde 2007. Especializado en auditorías de seguridad, administración de redes y sistemas, asegurando la infraestructura tecnológica necesaria para el éxito de las organizaciones.</p>
+                <p data-i18n="about">Profesional de Ciberseguridad con más de 18 años de experiencia en el sector tecnológico. Especializado en auditorías de seguridad, penetration testing, ethical hacking y administración de redes. Mi trayectoria abarca desde la enseñanza de informática hasta la implementación de infraestructuras de seguridad críticas, combinando un perfil técnico sólido con habilidades de liderazgo y comunicación. Certificado internacionalmente y comprometido con la protección de activos digitales mediante soluciones innovadoras y éticas.</p>
             </div>
 
             <div class="stats-grid">
@@ -638,11 +833,11 @@
                     <div class="stat-label" data-i18n="stat2">Proyectos Completados</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">25+</div>
+                    <div class="stat-number">27+</div>
                     <div class="stat-label" data-i18n="stat3">Certificaciones</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">5</div>
+                    <div class="stat-number">4</div>
                     <div class="stat-label" data-i18n="stat4">Idiomas</div>
                 </div>
             </div>
@@ -656,24 +851,26 @@
                 <h4 data-i18n="tech_skills_title">[Habilidades Técnicas]</h4>
                 <div class="skill-tags">
                     <span class="skill-tag">Pentesting</span>
+                    <span class="skill-tag">Ethical Hacking</span>
                     <span class="skill-tag">Kali Linux</span>
                     <span class="skill-tag">Metasploit</span>
                     <span class="skill-tag">Burp Suite</span>
                     <span class="skill-tag">Wireshark</span>
                     <span class="skill-tag">Nmap</span>
                     <span class="skill-tag">OWASP Top 10</span>
+                    <span class="skill-tag">Red Teaming</span>
                     <span class="skill-tag">Firewall Admin</span>
                     <span class="skill-tag">IDS/IPS</span>
                     <span class="skill-tag">SIEM</span>
                     <span class="skill-tag">Windows Server</span>
                     <span class="skill-tag">Linux Admin</span>
-                    <span class="skill-tag">Red Teaming</span>
                     <span class="skill-tag">Análisis Forense</span>
                     <span class="skill-tag">Autopsy</span>
                     <span class="skill-tag">Volatility</span>
                     <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">Bash Scripting</span>
                     <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Ciberseguridad IA</span>
                 </div>
             </div>
 
@@ -686,6 +883,8 @@
                     <span class="skill-tag soft" data-i18n="soft4">Trabajo en Equipo</span>
                     <span class="skill-tag soft" data-i18n="soft5">Pensamiento Crítico</span>
                     <span class="skill-tag soft" data-i18n="soft6">Integridad</span>
+                    <span class="skill-tag soft" data-i18n="soft7">Dedicación</span>
+                    <span class="skill-tag soft" data-i18n="soft8">Eficiencia</span>
                 </div>
             </div>
 
@@ -696,7 +895,6 @@
                     <span class="language-item" data-i18n="lang_en">Inglés <span class="language-level">(B2)</span></span>
                     <span class="language-item" data-i18n="lang_it">Italiano <span class="language-level">(B2)</span></span>
                     <span class="language-item" data-i18n="lang_de">Alemán <span class="language-level">(A1)</span></span>
-                    <span class="language-item" data-i18n="lang_fr">Francés <span class="language-level">(A1)</span></span>
                 </div>
             </div>
 
@@ -730,7 +928,7 @@
                     </ul>
                     <div class="project-links">
                         <a href="https://github.com/Hunt3r850/AegisTerminal" target="_blank" rel="noopener noreferrer" class="project-link github">📂 GitHub</a>
-                        <a href="https://github.com/Hunt3r850/AegisTerminal/blob/master/README.md" target="_blank" rel="noopener noreferrer" class="project-link">📖 Docs</a>
+                        <a href="https://github.com/Hunt3r850/AegisTerminal/blob/master/README.md" target="_blank" rel="noopener noreferrer" class="project-link">📖 Documentación</a>
                     </div>
                 </div>
 
@@ -758,7 +956,7 @@
                     </ul>
                     <div class="project-links">
                         <a href="https://github.com/Hunt3r850/KaliDefender" target="_blank" rel="noopener noreferrer" class="project-link github">📂 GitHub</a>
-                        <a href="https://github.com/Hunt3r850/KaliDefender/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="project-link">📖 Docs</a>
+                        <a href="https://github.com/Hunt3r850/KaliDefender/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="project-link">📖 Documentación</a>
                     </div>
                 </div>
 
@@ -769,7 +967,7 @@
                         <a href="https://github.com/Hunt3r850/cv-optimizer-resumego" target="_blank" rel="noopener noreferrer" class="project-name">CV Optimizer (ResumeGO)</a>
                         <span class="project-version">v2.0.2</span>
                     </div>
-                    <p class="project-description" data-i18n="proj3_desc">Optimizador de CV con IA local (Llama 3 + Ollama) que transforma experiencias laborales en logros cuantificables. Soporte multilingüe (ES/EN/DE/IT), extracción de PDF y salida HTML ATS-friendly.</p>
+                    <p class="project-description" data-i18n="proj3_desc">Optimizador de CV con IA local (Llama 3 + Ollama) que transforma experiencias laborales en logros cuantificables. Soporte multilingüe, extracción de PDF y salida HTML ATS-friendly.</p>
                     <div class="project-tech">
                         <span class="project-tech-tag">Python</span>
                         <span class="project-tech-tag">Streamlit</span>
@@ -870,44 +1068,150 @@
             </div>
 
             <div class="cert-grid">
+                <!-- 2026 -->
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_seo_ia">Certificado de SEO para IA y Google 2026</div>
+                    <div class="cert-issuer">BIG School</div>
+                    <div class="cert-date">05-2026</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_ciberseguridad">Curso de Ciberseguridad y Hacking Ético</div>
+                    <div class="cert-issuer">BIG School</div>
+                    <div class="cert-date">04-2026</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_iniciacion">Certificado de Iniciación al Desarrollo con IA</div>
+                    <div class="cert-issuer">BIG School</div>
+                    <div class="cert-date">03-2026</div>
+                </div>
                 <div class="cert-card">
                     <div class="cert-name">CAPT</div>
                     <div class="cert-issuer">Hackviser</div>
-                    <div class="cert-date">2026</div>
+                    <div class="cert-date">02-2026</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_vibe">Vibe Coding y Automatizaciones con IA</div>
+                    <div class="cert-issuer">BIG School</div>
+                    <div class="cert-date">01-2026</div>
                 </div>
                 <div class="cert-card">
                     <div class="cert-name">CRTOM</div>
                     <div class="cert-issuer">Red Team Leaders</div>
-                    <div class="cert-date">2026</div>
+                    <div class="cert-date">01-2026</div>
                 </div>
+                
+                <!-- 2025 -->
                 <div class="cert-card">
                     <div class="cert-name">CPPS</div>
                     <div class="cert-issuer">Hack & Fix</div>
-                    <div class="cert-date">2025</div>
+                    <div class="cert-date">12-2025</div>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-name">C-IA / C-AIA</div>
+                    <div class="cert-name" data-i18n="cert_marketing">Marketing Audit Pro</div>
                     <div class="cert-issuer">BIG School</div>
-                    <div class="cert-date">2025</div>
+                    <div class="cert-date">09-2025</div>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-name" data-i18n="cert5_name">Hacking Ético</div>
+                    <div class="cert-name" data-i18n="cert_desarrollo">Desarrollo con IA</div>
+                    <div class="cert-issuer">BIG School</div>
+                    <div class="cert-date">09-2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">IA WorkFlows</div>
+                    <div class="cert-issuer">BIG School</div>
+                    <div class="cert-date">09-2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_hacking">Hacking Ético</div>
                     <div class="cert-issuer">MasterD</div>
                     <div class="cert-date">2023-2025</div>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-name">AWS Cloud Practitioner</div>
-                    <div class="cert-issuer">Amazon Web Services</div>
-                    <div class="cert-date">2025</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Scrum Foundation</div>
+                    <div class="cert-name">Scrum Foundation Learner</div>
                     <div class="cert-issuer">Certiprof</div>
-                    <div class="cert-date">2025</div>
+                    <div class="cert-date">04-2025</div>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-name" data-i18n="cert8_name">Lic. Matemática-Informática</div>
-                    <div class="cert-issuer">Instituto Superior E. J. Varona</div>
+                    <div class="cert-name" data-i18n="cert_lean">Lean Leadership Learner</div>
+                    <div class="cert-issuer">Certiprof</div>
+                    <div class="cert-date">04-2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">AWS Cloud Quest: Cloud Practitioner</div>
+                    <div class="cert-issuer">Amazon Web Services</div>
+                    <div class="cert-date">01-2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_google_ia">Google: Inteligencia Artificial y Productividad</div>
+                    <div class="cert-issuer">Academy Santander</div>
+                    <div class="cert-date">01-2025</div>
+                </div>
+                
+                <!-- 2024 -->
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_teletrabajo">Ciberseguridad en el Teletrabajo</div>
+                    <div class="cert-issuer">Google Digital Academy</div>
+                    <div class="cert-date">11-2024</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_digitaliza">Digitaliza tu Empresa con Google Tools</div>
+                    <div class="cert-issuer">Google Digital Academy</div>
+                    <div class="cert-date">11-2024</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_apps">Desarrollo de Apps Móviles</div>
+                    <div class="cert-issuer">Google Digital Academy</div>
+                    <div class="cert-date">10-2024</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">CAPC</div>
+                    <div class="cert-issuer">Certiprof</div>
+                    <div class="cert-date">07-2024</div>
+                </div>
+                
+                <!-- 2010 -->
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_sql">Postgrado MS-SQL Server 2005</div>
+                    <div class="cert-issuer">DESOFT</div>
+                    <div class="cert-date">2010</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_exchange">Postgrado Exchange Server 2003</div>
+                    <div class="cert-issuer">DESOFT</div>
+                    <div class="cert-date">2010</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_isa">Postgrado ISA-Server 2004</div>
+                    <div class="cert-issuer">DESOFT</div>
+                    <div class="cert-date">2010</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_ad">Postgrado Active Directory</div>
+                    <div class="cert-issuer">DESOFT</div>
+                    <div class="cert-date">2010</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_redes">Postgrado Estructuras de Red Windows 2003</div>
+                    <div class="cert-issuer">DESOFT</div>
+                    <div class="cert-date">2010</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_hosts">Postgrado Servicios de Red</div>
+                    <div class="cert-issuer">DESOFT</div>
+                    <div class="cert-date">2010</div>
+                </div>
+                
+                <!-- 2008 -->
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_control">Postgrado Control Interno</div>
+                    <div class="cert-issuer">PREGER</div>
+                    <div class="cert-date">2008</div>
+                </div>
+                
+                <!-- Universidad -->
+                <div class="cert-card">
+                    <div class="cert-name" data-i18n="cert_lic">Licenciatura en Matemática-Informática</div>
+                    <div class="cert-issuer">Instituto Superior Enrique José Varona</div>
                     <div class="cert-date">2002-2007</div>
                 </div>
             </div>
@@ -960,17 +1264,19 @@
         
         <div class="footer">
             <p>© 2026 Lic. Ahmed O. Alfonso Garcia | Cybersecurity Specialist</p>
-            <p style="margin-top: 5px; font-size: 0.7rem;" data-i18n="footer_design">Diseño inspirado en terminal • Hecho con código limpio</p>
+            <p style="margin-top: 5px; font-size: 0.7rem;" data-i18n="footer_design">Diseño inspirado en terminal • Hecho con código limpio • Optimizado ATS</p>
         </div>
         
     </div><!-- /container -->
 
     <script>
-        // ===== SISTEMA DE TRADUCCIONES (5 idiomas + proyectos) =====
         const translations = {
             es: {
-                subtitle: "Especialista en Ciberseguridad | Hacker Ético | Auditor de Seguridad",
-                about: "Profesional informático con habilidades diversas y experiencia en el sector tecnológico, activo en TI desde 2007. Especializado en auditorías de seguridad, administración de redes y sistemas, asegurando la infraestructura tecnológica necesaria para el éxito de las organizaciones.",
+                subtitle: "Cybersecurity Specialist | Ethical Hacker | Security Auditor | Red Team Operator",
+                available: "⚡ Disponible para nuevos proyectos",
+                download_cv: "📄 Descargar CV en PDF",
+                download_cv_small: "Versión actualizada 2026 • ATS-Friendly",
+                about: "Profesional de Ciberseguridad con más de 18 años de experiencia en el sector tecnológico. Especializado en auditorías de seguridad, penetration testing, ethical hacking y administración de redes. Mi trayectoria abarca desde la enseñanza de informática hasta la implementación de infraestructuras de seguridad críticas, combinando un perfil técnico sólido con habilidades de liderazgo y comunicación. Certificado internacionalmente y comprometido con la protección de activos digitales mediante soluciones innovadoras y éticas.",
                 stat1: "Años de Experiencia",
                 stat2: "Proyectos Completados",
                 stat3: "Certificaciones",
@@ -984,11 +1290,12 @@
                 soft4: "Trabajo en Equipo",
                 soft5: "Pensamiento Crítico",
                 soft6: "Integridad",
+                soft7: "Dedicación",
+                soft8: "Eficiencia",
                 lang_es: "Español (Nativo)",
                 lang_en: "Inglés (B2)",
                 lang_it: "Italiano (B2)",
                 lang_de: "Alemán (A1)",
-                lang_fr: "Francés (A1)",
                 exp1_title: "Administrador de Redes",
                 exp1_desc1: "Gestión y optimización de redes y sistemas empresariales",
                 exp1_desc2: "Implementación de medidas de seguridad informática",
@@ -1005,25 +1312,43 @@
                 exp4_desc1: "Auditorías de seguridad TI",
                 exp4_desc2: "Identificación de vulnerabilidades críticas",
                 exp4_desc3: "Provisión de soluciones de seguridad",
-                cert5_name: "Hacking Ético",
-                cert8_name: "Lic. Matemática-Informática",
-                proj1_desc: "Suite de automatización avanzada para Pentesting y Hacking Ético con interfaz CLI modular. Simplifica tareas de seguridad ofensiva con módulos integrados para reconocimiento, explotación y post-explotación.",
+                cert_seo_ia: "Certificado de SEO para IA y Google 2026",
+                cert_ciberseguridad: "Curso de Ciberseguridad y Hacking Ético",
+                cert_iniciacion: "Certificado de Iniciación al Desarrollo con IA",
+                cert_vibe: "Vibe Coding y Automatizaciones con IA",
+                cert_marketing: "Marketing Audit Pro",
+                cert_desarrollo: "Desarrollo con IA",
+                cert_hacking: "Hacking Ético",
+                cert_lean: "Lean Leadership Learner",
+                cert_google_ia: "Google: Inteligencia Artificial y Productividad",
+                cert_teletrabajo: "Ciberseguridad en el Teletrabajo",
+                cert_digitaliza: "Digitaliza tu Empresa con Google Tools",
+                cert_apps: "Desarrollo de Apps Móviles",
+                cert_sql: "Postgrado MS-SQL Server 2005",
+                cert_exchange: "Postgrado Exchange Server 2003",
+                cert_isa: "Postgrado ISA-Server 2004",
+                cert_ad: "Postgrado Active Directory",
+                cert_redes: "Postgrado Estructuras de Red Windows 2003",
+                cert_hosts: "Postgrado Servicios de Red",
+                cert_control: "Postgrado Control Interno",
+                cert_lic: "Licenciatura en Matemática-Informática",
+                proj1_desc: "Suite de automatización avanzada para Pentesting y Hacking Ético con interfaz CLI modular.",
                 proj1_hl1: "8 módulos integrados: Wireless, Web, Brute Force, Exploitation, Mobile",
                 proj1_hl2: "Escaneo de vulnerabilidades web con Nikto y WPScan",
                 proj1_hl3: "Generación de payloads con msfvenom + listener automático",
-                proj2_desc: "Sistema Dual Stealth/Attack para Pentesters. Transforma Kali Linux en plataforma de Red Teaming con máxima privacidad (Tor), C2 seguro (Tailscale/ZeroTier) y aislamiento de Metasploit con AppArmor.",
+                proj2_desc: "Sistema Dual Stealth/Attack para Pentesters con máxima privacidad y C2 seguro.",
                 proj2_hl1: "Modo Stealth: Navegación 100% anónima por Tor sin fugas DNS",
                 proj2_hl2: "Modo Attack: Handlers de Metasploit solo accesibles desde red privada",
-                proj2_hl3: "AppArmor: Metasploit aislado del sistema (no lee /etc/shadow)",
-                proj3_desc: "Optimizador de CV con IA local (Llama 3 + Ollama) que transforma experiencias laborales en logros cuantificables. Soporte multilingüe (ES/EN/DE/IT), extracción de PDF y salida HTML ATS-friendly.",
+                proj2_hl3: "AppArmor: Metasploit aislado del sistema",
+                proj3_desc: "Optimizador de CV con IA local (Llama 3 + Ollama) y soporte multilingüe.",
                 proj3_hl1: "IA local (Llama 3) para reescribir y mejorar puntos de experiencia",
                 proj3_hl2: "Detección automática de industria para optimización contextual",
                 proj3_hl3: "Salida HTML limpio diseñado para sistemas ATS",
-                proj4_desc: "Plataforma integral de ciberseguridad para escaneo automatizado de redes y detección de vulnerabilidades. Base de datos CVE actualizada con vulnerabilidades críticas de 2025-2026.",
+                proj4_desc: "Plataforma integral de ciberseguridad con base de datos CVE actualizada.",
                 proj4_hl1: "Base de datos CVE actualizada (2025-2026): RCE, auth bypass",
                 proj4_hl2: "Estructura modular: network scanner, vuln scanner, web fuzzer",
                 proj4_hl3: "Instalación automatizada con setup.py y ejecución rápida",
-                contact_intro: "Disponible para nuevas oportunidades y colaboraciones. Contáctame a través de este formulario seguro",
+                contact_intro: "Disponible para nuevas oportunidades. Contáctame a través de este formulario seguro",
                 contact_encrypted: "[cifrado extremo a extremo]",
                 form_name: "$ nombre:",
                 form_name_placeholder: "Tu nombre completo",
@@ -1036,11 +1361,14 @@
                 form_submit: "$ enviar_mensaje --cifrado",
                 form_success: "✔ Mensaje enviado exitosamente. Te responderé pronto.",
                 pgp: "PGP Key disponible bajo solicitud",
-                footer_design: "Diseño inspirado en terminal • Hecho con código limpio"
+                footer_design: "Diseño inspirado en terminal • Optimizado ATS"
             },
             en: {
-                subtitle: "Cybersecurity Specialist | Ethical Hacker | Security Auditor",
-                about: "IT professional with diverse skills and experience in the technology sector, active in IT since 2007. Specialized in security audits, network and systems administration, ensuring the technological infrastructure necessary for organizational success.",
+                subtitle: "Cybersecurity Specialist | Ethical Hacker | Security Auditor | Red Team Operator",
+                available: "⚡ Available for new projects",
+                download_cv: "📄 Download CV (PDF)",
+                download_cv_small: "Updated 2026 version • ATS-Friendly",
+                about: "Cybersecurity Professional with 18+ years of experience in the technology sector. Specialized in security audits, penetration testing, ethical hacking and network administration. Internationally certified and committed to protecting digital assets through innovative and ethical solutions.",
                 stat1: "Years of Experience",
                 stat2: "Projects Completed",
                 stat3: "Certifications",
@@ -1054,46 +1382,65 @@
                 soft4: "Teamwork",
                 soft5: "Critical Thinking",
                 soft6: "Integrity",
+                soft7: "Dedication",
+                soft8: "Efficiency",
                 lang_es: "Spanish (Native)",
                 lang_en: "English (B2)",
                 lang_it: "Italian (B2)",
                 lang_de: "German (A1)",
-                lang_fr: "French (A1)",
                 exp1_title: "Network Administrator",
-                exp1_desc1: "Management and optimization of enterprise networks and systems",
-                exp1_desc2: "Implementation of computer security measures",
-                exp1_desc3: "Improvement and increase of operational efficiency",
+                exp1_desc1: "Enterprise network and systems management",
+                exp1_desc2: "Computer security implementation",
+                exp1_desc3: "Operational efficiency improvement",
                 exp2_title: "IT Security Specialist",
                 exp2_desc1: "Cybersecurity audits and assessments",
-                exp2_desc2: "Identification and mitigation of vulnerabilities",
+                exp2_desc2: "Vulnerability identification and mitigation",
                 exp2_desc3: "Strengthening protection measures",
                 exp3_title: "Computer Forensic Detective",
-                exp3_desc1: "Preparation of expert reports",
-                exp3_desc2: "Testimony in judicial proceedings",
-                exp3_desc3: "Forensic analysis of systems",
+                exp3_desc1: "Expert report preparation",
+                exp3_desc2: "Judicial testimony",
+                exp3_desc3: "Forensic system analysis",
                 exp4_title: "Assistant IT Auditor",
                 exp4_desc1: "IT security audits",
-                exp4_desc2: "Identification of critical vulnerabilities",
-                exp4_desc3: "Provision of security solutions",
-                cert5_name: "Ethical Hacking",
-                cert8_name: "B.Sc. Mathematics-Computer Science",
-                proj1_desc: "Advanced automation suite for Pentesting and Ethical Hacking with modular CLI interface. Simplifies offensive security tasks with integrated modules for reconnaissance, exploitation and post-exploitation.",
+                exp4_desc2: "Critical vulnerability identification",
+                exp4_desc3: "Security solutions provision",
+                cert_seo_ia: "SEO for AI and Google 2026 Certificate",
+                cert_ciberseguridad: "Cybersecurity and Ethical Hacking Course",
+                cert_iniciacion: "Introduction to AI Development Certificate",
+                cert_vibe: "Vibe Coding and AI Automations",
+                cert_marketing: "Marketing Audit Pro",
+                cert_desarrollo: "AI Development",
+                cert_hacking: "Ethical Hacking",
+                cert_lean: "Lean Leadership Learner",
+                cert_google_ia: "Google: AI and Productivity",
+                cert_teletrabajo: "Cybersecurity in Teleworking",
+                cert_digitaliza: "Digitize Your Business with Google Tools",
+                cert_apps: "Mobile App Development",
+                cert_sql: "Postgraduate MS-SQL Server 2005",
+                cert_exchange: "Postgraduate Exchange Server 2003",
+                cert_isa: "Postgraduate ISA-Server 2004",
+                cert_ad: "Postgraduate Active Directory",
+                cert_redes: "Postgraduate Windows 2003 Network",
+                cert_hosts: "Postgraduate Network Services",
+                cert_control: "Postgraduate Internal Control",
+                cert_lic: "B.Sc. Mathematics-Computer Science",
+                proj1_desc: "Advanced automation suite for Pentesting with modular CLI.",
                 proj1_hl1: "8 integrated modules: Wireless, Web, Brute Force, Exploitation, Mobile",
                 proj1_hl2: "Web vulnerability scanning with Nikto and WPScan",
                 proj1_hl3: "Payload generation with msfvenom + automatic listener",
-                proj2_desc: "Dual Stealth/Attack System for Pentesters. Transforms Kali Linux into a Red Teaming platform with maximum privacy (Tor), secure C2 (Tailscale/ZeroTier) and Metasploit isolation with AppArmor.",
-                proj2_hl1: "Stealth Mode: 100% anonymous browsing via Tor without DNS leaks",
-                proj2_hl2: "Attack Mode: Metasploit handlers only accessible from private network",
-                proj2_hl3: "AppArmor: Metasploit isolated from system (cannot read /etc/shadow)",
-                proj3_desc: "CV optimizer with local AI (Llama 3 + Ollama) that transforms work experiences into quantifiable achievements. Multilingual support (ES/EN/DE/IT), PDF extraction and ATS-friendly HTML output.",
-                proj3_hl1: "Local AI (Llama 3) to rewrite and improve experience bullet points",
-                proj3_hl2: "Automatic industry detection for contextual optimization",
-                proj3_hl3: "Clean HTML output designed for ATS systems",
-                proj4_desc: "Comprehensive cybersecurity platform for automated network scanning and vulnerability detection. Updated CVE database with critical 2025-2026 vulnerabilities.",
-                proj4_hl1: "Updated CVE database (2025-2026): RCE, auth bypass",
-                proj4_hl2: "Modular structure: network scanner, vuln scanner, web fuzzer",
-                proj4_hl3: "Automated installation with setup.py and quick execution",
-                contact_intro: "Available for new opportunities and collaborations. Contact me through this secure form",
+                proj2_desc: "Dual Stealth/Attack System with maximum privacy and secure C2.",
+                proj2_hl1: "Stealth Mode: 100% anonymous browsing via Tor",
+                proj2_hl2: "Attack Mode: Handlers only via private network",
+                proj2_hl3: "AppArmor: Metasploit isolated from system",
+                proj3_desc: "CV optimizer with local AI (Llama 3) and multilingual support.",
+                proj3_hl1: "Local AI to rewrite experience bullet points",
+                proj3_hl2: "Automatic industry detection",
+                proj3_hl3: "ATS-friendly HTML output",
+                proj4_desc: "Comprehensive cybersecurity platform with updated CVE database.",
+                proj4_hl1: "Updated CVE database (2025-2026)",
+                proj4_hl2: "Modular structure: network scanner, vuln scanner",
+                proj4_hl3: "Automated installation with setup.py",
+                contact_intro: "Available for new opportunities. Contact me through this secure form",
                 contact_encrypted: "[end-to-end encrypted]",
                 form_name: "$ name:",
                 form_name_placeholder: "Your full name",
@@ -1104,13 +1451,16 @@
                 form_message: "$ message:",
                 form_message_placeholder: "Write your message here...",
                 form_submit: "$ send_message --encrypted",
-                form_success: "✔ Message sent successfully. I will respond soon.",
+                form_success: "✔ Message sent successfully.",
                 pgp: "PGP Key available upon request",
-                footer_design: "Terminal-inspired design • Made with clean code"
+                footer_design: "Terminal-inspired design • ATS Optimized"
             },
             de: {
-                subtitle: "Cybersicherheitsspezialist | Ethischer Hacker | Sicherheitsauditor",
-                about: "IT-Fachmann mit vielfältigen Fähigkeiten und Erfahrung im Technologiesektor, aktiv in der IT seit 2007. Spezialisiert auf Sicherheitsaudits, Netzwerk- und Systemadministration, um die technologische Infrastruktur für den Erfolg von Organisationen zu gewährleisten.",
+                subtitle: "Cybersicherheitsspezialist | Ethischer Hacker | Sicherheitsauditor | Red Team Operator",
+                available: "⚡ Verfügbar für neue Projekte",
+                download_cv: "📄 CV als PDF herunterladen",
+                download_cv_small: "Aktualisierte Version 2026 • ATS-freundlich",
+                about: "Cybersicherheitsexperte mit über 18 Jahren Erfahrung. Spezialisiert auf Sicherheitsaudits, Penetrationstests, Ethical Hacking und Netzwerkadministration. International zertifiziert und dem Schutz digitaler Assets verpflichtet.",
                 stat1: "Jahre Erfahrung",
                 stat2: "Abgeschlossene Projekte",
                 stat3: "Zertifizierungen",
@@ -1124,63 +1474,85 @@
                 soft4: "Teamarbeit",
                 soft5: "Kritisches Denken",
                 soft6: "Integrität",
+                soft7: "Hingabe",
+                soft8: "Effizienz",
                 lang_es: "Spanisch (Muttersprache)",
                 lang_en: "Englisch (B2)",
                 lang_it: "Italienisch (B2)",
                 lang_de: "Deutsch (A1)",
-                lang_fr: "Französisch (A1)",
                 exp1_title: "Netzwerkadministrator",
-                exp1_desc1: "Verwaltung und Optimierung von Unternehmensnetzwerken und -systemen",
-                exp1_desc2: "Implementierung von Computersicherheitsmaßnahmen",
-                exp1_desc3: "Verbesserung und Steigerung der Betriebseffizienz",
+                exp1_desc1: "Verwaltung von Unternehmensnetzwerken",
+                exp1_desc2: "Computersicherheitsmaßnahmen",
+                exp1_desc3: "Betriebseffizienzsteigerung",
                 exp2_title: "IT-Sicherheitsspezialist",
-                exp2_desc1: "Cybersicherheitsaudits und -bewertungen",
-                exp2_desc2: "Identifizierung und Minderung von Schwachstellen",
-                exp2_desc3: "Stärkung der Schutzmaßnahmen",
+                exp2_desc1: "Cybersicherheitsaudits",
+                exp2_desc2: "Schwachstellenminderung",
+                exp2_desc3: "Schutzmaßnahmenstärkung",
                 exp3_title: "IT-Forensik-Detektiv",
-                exp3_desc1: "Erstellung von Sachverständigengutachten",
-                exp3_desc2: "Zeugenaussagen in Gerichtsverfahren",
-                exp3_desc3: "Forensische Analyse von Systemen",
+                exp3_desc1: "Sachverständigengutachten",
+                exp3_desc2: "Gerichtsaussagen",
+                exp3_desc3: "Forensische Systemanalyse",
                 exp4_title: "Assistenz-IT-Auditor",
                 exp4_desc1: "IT-Sicherheitsaudits",
-                exp4_desc2: "Identifizierung kritischer Schwachstellen",
-                exp4_desc3: "Bereitstellung von Sicherheitslösungen",
-                cert5_name: "Ethisches Hacking",
-                cert8_name: "B.Sc. Mathematik-Informatik",
-                proj1_desc: "Fortschrittliche Automatisierungssuite für Pentesting und Ethical Hacking mit modularer CLI-Schnittstelle. Vereinfacht offensive Sicherheitsaufgaben mit integrierten Modulen.",
-                proj1_hl1: "8 integrierte Module: Wireless, Web, Brute Force, Exploitation, Mobile",
-                proj1_hl2: "Web-Schwachstellenscanning mit Nikto und WPScan",
-                proj1_hl3: "Payload-Generierung mit msfvenom + automatischer Listener",
-                proj2_desc: "Duales Stealth/Attack-System für Pentester. Verwandelt Kali Linux in eine Red Teaming-Plattform mit maximaler Privatsphäre (Tor) und Metasploit-Isolierung.",
-                proj2_hl1: "Stealth-Modus: 100% anonymes Browsen über Tor ohne DNS-Lecks",
-                proj2_hl2: "Attack-Modus: Metasploit-Handler nur über privates Netzwerk",
-                proj2_hl3: "AppArmor: Metasploit vom System isoliert",
-                proj3_desc: "CV-Optimierer mit lokaler KI (Llama 3 + Ollama). Mehrsprachige Unterstützung (ES/EN/DE/IT), PDF-Extraktion und ATS-freundliche HTML-Ausgabe.",
-                proj3_hl1: "Lokale KI (Llama 3) zum Umschreiben von Erfahrungspunkten",
-                proj3_hl2: "Automatische Branchenerkennung für kontextbezogene Optimierung",
-                proj3_hl3: "Saubere HTML-Ausgabe für ATS-Systeme",
-                proj4_desc: "Umfassende Cybersicherheitsplattform für automatisiertes Netzwerkscanning. Aktualisierte CVE-Datenbank mit kritischen Schwachstellen 2025-2026.",
-                proj4_hl1: "Aktualisierte CVE-Datenbank (2025-2026): RCE, Auth-Bypass",
-                proj4_hl2: "Modulare Struktur: Netzwerkscanner, Schwachstellenscanner, Web-Fuzzer",
-                proj4_hl3: "Automatisierte Installation mit setup.py",
-                contact_intro: "Verfügbar für neue Möglichkeiten und Zusammenarbeit. Kontaktieren Sie mich über dieses sichere Formular",
+                exp4_desc2: "Kritische Schwachstellen",
+                exp4_desc3: "Sicherheitslösungen",
+                cert_seo_ia: "SEO für KI und Google 2026 Zertifikat",
+                cert_ciberseguridad: "Cybersicherheit und Ethical Hacking Kurs",
+                cert_iniciacion: "Einführung in die KI-Entwicklung Zertifikat",
+                cert_vibe: "Vibe Coding und KI-Automatisierungen",
+                cert_marketing: "Marketing Audit Pro",
+                cert_desarrollo: "KI-Entwicklung",
+                cert_hacking: "Ethisches Hacking",
+                cert_lean: "Lean Leadership Lernender",
+                cert_google_ia: "Google: KI und Produktivität",
+                cert_teletrabajo: "Cybersicherheit in Telearbeit",
+                cert_digitaliza: "Unternehmen mit Google-Tools digitalisieren",
+                cert_apps: "Mobile App-Entwicklung",
+                cert_sql: "Postgraduierten MS-SQL Server 2005",
+                cert_exchange: "Postgraduierten Exchange Server 2003",
+                cert_isa: "Postgraduierten ISA-Server 2004",
+                cert_ad: "Postgraduierten Active Directory",
+                cert_redes: "Postgraduierten Windows 2003 Netzwerk",
+                cert_hosts: "Postgraduierten Netzwerkdienste",
+                cert_control: "Postgraduierten interne Kontrolle",
+                cert_lic: "Bachelor in Mathematik-Informatik",
+                proj1_desc: "Automatisierungssuite für Pentesting mit modularer CLI.",
+                proj1_hl1: "8 integrierte Module",
+                proj1_hl2: "Web-Schwachstellenscanning",
+                proj1_hl3: "Payload-Generierung mit msfvenom",
+                proj2_desc: "Duales Stealth/Attack-System mit maximaler Privatsphäre.",
+                proj2_hl1: "Stealth-Modus: Anonymes Browsen via Tor",
+                proj2_hl2: "Attack-Modus: Handler nur via privates Netzwerk",
+                proj2_hl3: "AppArmor: Metasploit isoliert",
+                proj3_desc: "CV-Optimierer mit lokaler KI und mehrsprachiger Unterstützung.",
+                proj3_hl1: "Lokale KI für Erfahrungspunkte",
+                proj3_hl2: "Automatische Branchenerkennung",
+                proj3_hl3: "ATS-freundliche HTML-Ausgabe",
+                proj4_desc: "Cybersicherheitsplattform mit aktualisierter CVE-Datenbank.",
+                proj4_hl1: "Aktualisierte CVE-Datenbank (2025-2026)",
+                proj4_hl2: "Modulare Struktur",
+                proj4_hl3: "Automatisierte Installation",
+                contact_intro: "Verfügbar für neue Möglichkeiten. Sicheres Kontaktformular",
                 contact_encrypted: "[Ende-zu-Ende-verschlüsselt]",
                 form_name: "$ name:",
                 form_name_placeholder: "Ihr vollständiger Name",
                 form_email: "$ email:",
                 form_email_placeholder: "sie@email.com",
                 form_subject: "$ betreff:",
-                form_subject_placeholder: "Kooperationsvorschlag, Beratung, etc.",
+                form_subject_placeholder: "Kooperationsvorschlag",
                 form_message: "$ nachricht:",
-                form_message_placeholder: "Schreiben Sie Ihre Nachricht hier...",
+                form_message_placeholder: "Ihre Nachricht...",
                 form_submit: "$ nachricht_senden --verschlüsselt",
-                form_success: "✔ Nachricht erfolgreich gesendet. Ich werde bald antworten.",
-                pgp: "PGP-Schlüssel auf Anfrage erhältlich",
-                footer_design: "Terminal-inspiriertes Design • Mit sauberem Code erstellt"
+                form_success: "✔ Nachricht erfolgreich gesendet.",
+                pgp: "PGP-Schlüssel auf Anfrage",
+                footer_design: "Terminal-inspiriertes Design • ATS-optimiert"
             },
             it: {
-                subtitle: "Specialista in Cybersecurity | Hacker Etico | Revisore di Sicurezza",
-                about: "Professionista IT con competenze diversificate ed esperienza nel settore tecnologico, attivo nell'IT dal 2007. Specializzato in audit di sicurezza, amministrazione di reti e sistemi.",
+                subtitle: "Specialista in Cybersecurity | Hacker Etico | Revisore di Sicurezza | Red Team Operator",
+                available: "⚡ Disponibile per nuovi progetti",
+                download_cv: "📄 Scarica CV in PDF",
+                download_cv_small: "Versione aggiornata 2026 • ATS-Friendly",
+                about: "Professionista di Cybersecurity con oltre 18 anni di esperienza. Specializzato in audit di sicurezza, penetration testing, ethical hacking e amministrazione di rete. Certificato internazionalmente.",
                 stat1: "Anni di Esperienza",
                 stat2: "Progetti Completati",
                 stat3: "Certificazioni",
@@ -1194,63 +1566,85 @@
                 soft4: "Lavoro di Squadra",
                 soft5: "Pensiero Critico",
                 soft6: "Integrità",
+                soft7: "Dedizione",
+                soft8: "Efficienza",
                 lang_es: "Spagnolo (Madrelingua)",
                 lang_en: "Inglese (B2)",
                 lang_it: "Italiano (B2)",
                 lang_de: "Tedesco (A1)",
-                lang_fr: "Francese (A1)",
                 exp1_title: "Amministratore di Rete",
-                exp1_desc1: "Gestione e ottimizzazione di reti e sistemi aziendali",
-                exp1_desc2: "Implementazione di misure di sicurezza informatica",
-                exp1_desc3: "Miglioramento e aumento dell'efficienza operativa",
+                exp1_desc1: "Gestione reti aziendali",
+                exp1_desc2: "Implementazione sicurezza",
+                exp1_desc3: "Efficienza operativa",
                 exp2_title: "Specialista in Sicurezza Informatica",
-                exp2_desc1: "Audit e valutazioni di cybersecurity",
-                exp2_desc2: "Identificazione e mitigazione delle vulnerabilità",
-                exp2_desc3: "Rafforzamento delle misure di protezione",
+                exp2_desc1: "Audit cybersecurity",
+                exp2_desc2: "Mitigazione vulnerabilità",
+                exp2_desc3: "Rafforzamento protezione",
                 exp3_title: "Detective Informatico Forense",
-                exp3_desc1: "Preparazione di perizie",
-                exp3_desc2: "Testimonianze in procedimenti giudiziari",
-                exp3_desc3: "Analisi forense dei sistemi",
+                exp3_desc1: "Preparazione perizie",
+                exp3_desc2: "Testimonianze giudiziarie",
+                exp3_desc3: "Analisi forense sistemi",
                 exp4_title: "Assistente Revisore Informatico",
-                exp4_desc1: "Audit di sicurezza IT",
-                exp4_desc2: "Identificazione di vulnerabilità critiche",
-                exp4_desc3: "Fornitura di soluzioni di sicurezza",
-                cert5_name: "Hacking Etico",
-                cert8_name: "Laurea in Matematica-Informatica",
-                proj1_desc: "Suite di automazione avanzata per Pentesting e Hacking Etico con interfaccia CLI modulare. Semplifica le attività di sicurezza offensiva con moduli integrati.",
-                proj1_hl1: "8 moduli integrati: Wireless, Web, Brute Force, Exploitation, Mobile",
-                proj1_hl2: "Scansione vulnerabilità web con Nikto e WPScan",
-                proj1_hl3: "Generazione payload con msfvenom + listener automatico",
-                proj2_desc: "Sistema Dual Stealth/Attack per Pentesters. Trasforma Kali Linux con massima privacy (Tor) e isolamento Metasploit con AppArmor.",
-                proj2_hl1: "Modalità Stealth: Navigazione 100% anonima via Tor",
-                proj2_hl2: "Modalità Attack: Handler Metasploit solo da rete privata",
-                proj2_hl3: "AppArmor: Metasploit isolato dal sistema",
-                proj3_desc: "Ottimizzatore CV con IA locale (Llama 3 + Ollama). Supporto multilingue (ES/EN/DE/IT) e output HTML ottimizzato per ATS.",
-                proj3_hl1: "IA locale (Llama 3) per riscrivere punti esperienza",
-                proj3_hl2: "Rilevamento automatico del settore",
-                proj3_hl3: "Output HTML pulito per sistemi ATS",
-                proj4_desc: "Piattaforma completa per scansione automatizzata di reti. Database CVE aggiornato con vulnerabilità critiche 2025-2026.",
-                proj4_hl1: "Database CVE aggiornato (2025-2026): RCE, auth bypass",
-                proj4_hl2: "Struttura modulare: scanner di rete, scanner vuln, web fuzzer",
-                proj4_hl3: "Installazione automatizzata con setup.py",
-                contact_intro: "Disponibile per nuove opportunità e collaborazioni. Contattami tramite questo modulo sicuro",
+                exp4_desc1: "Audit sicurezza IT",
+                exp4_desc2: "Vulnerabilità critiche",
+                exp4_desc3: "Soluzioni sicurezza",
+                cert_seo_ia: "Certificato SEO per IA e Google 2026",
+                cert_ciberseguridad: "Corso Cybersicurezza e Hacking Etico",
+                cert_iniciacion: "Certificato Iniziazione Sviluppo IA",
+                cert_vibe: "Vibe Coding e Automazioni IA",
+                cert_marketing: "Marketing Audit Pro",
+                cert_desarrollo: "Sviluppo con IA",
+                cert_hacking: "Hacking Etico",
+                cert_lean: "Lean Leadership Learner",
+                cert_google_ia: "Google: IA e Produttività",
+                cert_teletrabajo: "Cybersicurezza nel Telelavoro",
+                cert_digitaliza: "Digitalizza Impresa con Google Tools",
+                cert_apps: "Sviluppo App Mobili",
+                cert_sql: "Post-laurea MS-SQL Server 2005",
+                cert_exchange: "Post-laurea Exchange Server 2003",
+                cert_isa: "Post-laurea ISA-Server 2004",
+                cert_ad: "Post-laurea Active Directory",
+                cert_redes: "Post-laurea Reti Windows 2003",
+                cert_hosts: "Post-laurea Servizi di Rete",
+                cert_control: "Post-laurea Controllo Interno",
+                cert_lic: "Laurea in Matematica-Informatica",
+                proj1_desc: "Suite automazione Pentesting con CLI modulare.",
+                proj1_hl1: "8 moduli integrati",
+                proj1_hl2: "Scansione vulnerabilità web",
+                proj1_hl3: "Generazione payload con msfvenom",
+                proj2_desc: "Sistema Dual Stealth/Attack con privacy massima.",
+                proj2_hl1: "Modalità Stealth: Navigazione anonima via Tor",
+                proj2_hl2: "Modalità Attack: Handler solo via rete privata",
+                proj2_hl3: "AppArmor: Metasploit isolato",
+                proj3_desc: "Ottimizzatore CV con IA locale e supporto multilingue.",
+                proj3_hl1: "IA locale per punti esperienza",
+                proj3_hl2: "Rilevamento automatico settore",
+                proj3_hl3: "Output HTML per ATS",
+                proj4_desc: "Piattaforma cybersecurity con database CVE aggiornato.",
+                proj4_hl1: "Database CVE aggiornato (2025-2026)",
+                proj4_hl2: "Struttura modulare",
+                proj4_hl3: "Installazione automatizzata",
+                contact_intro: "Disponibile per nuove opportunità. Modulo di contatto sicuro",
                 contact_encrypted: "[crittografia end-to-end]",
                 form_name: "$ nome:",
                 form_name_placeholder: "Il tuo nome completo",
                 form_email: "$ email:",
                 form_email_placeholder: "tu@email.com",
                 form_subject: "$ oggetto:",
-                form_subject_placeholder: "Proposta di collaborazione, Consulenza, ecc.",
+                form_subject_placeholder: "Proposta di collaborazione",
                 form_message: "$ messaggio:",
-                form_message_placeholder: "Scrivi il tuo messaggio qui...",
+                form_message_placeholder: "Scrivi il tuo messaggio...",
                 form_submit: "$ invia_messaggio --crittografato",
-                form_success: "✔ Messaggio inviato con successo. Risponderò presto.",
-                pgp: "Chiave PGP disponibile su richiesta",
-                footer_design: "Design ispirato al terminale • Realizzato con codice pulito"
+                form_success: "✔ Messaggio inviato con successo.",
+                pgp: "Chiave PGP su richiesta",
+                footer_design: "Design ispirato al terminale • Ottimizzato ATS"
             },
             fr: {
-                subtitle: "Spécialiste en Cybersécurité | Hacker Éthique | Auditeur de Sécurité",
-                about: "Professionnel de l'informatique avec des compétences diversifiées et de l'expérience dans le secteur technologique, actif dans l'IT depuis 2007. Spécialisé dans les audits de sécurité, l'administration des réseaux et des systèmes.",
+                subtitle: "Spécialiste en Cybersécurité | Hacker Éthique | Auditeur de Sécurité | Red Team Operator",
+                available: "⚡ Disponible pour nouveaux projets",
+                download_cv: "📄 Télécharger CV PDF",
+                download_cv_small: "Version 2026 • ATS-Friendly",
+                about: "Professionnel de la Cybersécurité avec 18+ ans d'expérience. Spécialisé en audits de sécurité, tests d'intrusion, hacking éthique et administration réseau. Certifié internationalement.",
                 stat1: "Années d'Expérience",
                 stat2: "Projets Réalisés",
                 stat3: "Certifications",
@@ -1260,63 +1654,82 @@
                 lang_title: "[Langues]",
                 soft1: "Leadership",
                 soft2: "Communication",
-                soft3: "Résolution de Problèmes",
+                soft3: "Résolution Problèmes",
                 soft4: "Travail d'Équipe",
                 soft5: "Pensée Critique",
                 soft6: "Intégrité",
+                soft7: "Dévouement",
+                soft8: "Efficacité",
                 lang_es: "Espagnol (Natif)",
                 lang_en: "Anglais (B2)",
                 lang_it: "Italien (B2)",
                 lang_de: "Allemand (A1)",
-                lang_fr: "Français (A1)",
                 exp1_title: "Administrateur Réseau",
-                exp1_desc1: "Gestion et optimisation des réseaux et systèmes d'entreprise",
-                exp1_desc2: "Mise en œuvre de mesures de sécurité informatique",
-                exp1_desc3: "Amélioration et augmentation de l'efficacité opérationnelle",
-                exp2_title: "Spécialiste en Sécurité Informatique",
-                exp2_desc1: "Audits et évaluations de cybersécurité",
-                exp2_desc2: "Identification et atténuation des vulnérabilités",
-                exp2_desc3: "Renforcement des mesures de protection",
-                exp3_title: "Détective en Informatique Légale",
-                exp3_desc1: "Préparation de rapports d'expertise",
-                exp3_desc2: "Témoignages dans les procédures judiciaires",
-                exp3_desc3: "Analyse médico-légale des systèmes",
+                exp1_desc1: "Gestion réseaux entreprise",
+                exp1_desc2: "Mesures sécurité informatique",
+                exp1_desc3: "Efficacité opérationnelle",
+                exp2_title: "Spécialiste Sécurité Informatique",
+                exp2_desc1: "Audits cybersécurité",
+                exp2_desc2: "Atténuation vulnérabilités",
+                exp2_desc3: "Renforcement protection",
+                exp3_title: "Détective Informatique Légale",
+                exp3_desc1: "Rapports d'expertise",
+                exp3_desc2: "Témoignages judiciaires",
+                exp3_desc3: "Analyse médico-légale",
                 exp4_title: "Auditeur Informatique Adjoint",
-                exp4_desc1: "Audits de sécurité informatique",
-                exp4_desc2: "Identification des vulnérabilités critiques",
-                exp4_desc3: "Fourniture de solutions de sécurité",
-                cert5_name: "Hacking Éthique",
-                cert8_name: "Licence Mathématiques-Informatique",
-                proj1_desc: "Suite d'automatisation avancée pour le Pentesting et le Hacking Éthique avec interface CLI modulaire. Simplifie les tâches de sécurité offensive avec des modules intégrés.",
-                proj1_hl1: "8 modules intégrés: Wireless, Web, Brute Force, Exploitation, Mobile",
-                proj1_hl2: "Scan de vulnérabilités web avec Nikto et WPScan",
-                proj1_hl3: "Génération de payloads avec msfvenom + listener automatique",
-                proj2_desc: "Système Dual Stealth/Attack pour Pentesters. Transforme Kali Linux avec confidentialité maximale (Tor) et isolation Metasploit avec AppArmor.",
-                proj2_hl1: "Mode Stealth: Navigation 100% anonyme via Tor",
-                proj2_hl2: "Mode Attack: Handlers Metasploit uniquement via réseau privé",
-                proj2_hl3: "AppArmor: Metasploit isolé du système",
-                proj3_desc: "Optimiseur de CV avec IA locale (Llama 3 + Ollama). Support multilingue (ES/EN/DE/IT) et sortie HTML optimisée ATS.",
-                proj3_hl1: "IA locale (Llama 3) pour réécrire les points d'expérience",
-                proj3_hl2: "Détection automatique du secteur d'activité",
-                proj3_hl3: "Sortie HTML propre pour systèmes ATS",
-                proj4_desc: "Plateforme complète de cybersécurité pour le scan automatisé de réseaux. Base de données CVE à jour avec vulnérabilités critiques 2025-2026.",
-                proj4_hl1: "Base CVE à jour (2025-2026): RCE, contournement d'auth",
-                proj4_hl2: "Structure modulaire: scanner réseau, scanner vulnérabilités, fuzzer web",
-                proj4_hl3: "Installation automatisée avec setup.py",
-                contact_intro: "Disponible pour de nouvelles opportunités et collaborations. Contactez-moi via ce formulaire sécurisé",
+                exp4_desc1: "Audits sécurité IT",
+                exp4_desc2: "Vulnérabilités critiques",
+                exp4_desc3: "Solutions sécurité",
+                cert_seo_ia: "Certificat SEO pour IA et Google 2026",
+                cert_ciberseguridad: "Cours Cybersécurité et Hacking Éthique",
+                cert_iniciacion: "Certificat Initiation Développement IA",
+                cert_vibe: "Vibe Coding et Automatisations IA",
+                cert_marketing: "Marketing Audit Pro",
+                cert_desarrollo: "Développement avec IA",
+                cert_hacking: "Hacking Éthique",
+                cert_lean: "Lean Leadership Learner",
+                cert_google_ia: "Google: IA et Productivité",
+                cert_teletrabajo: "Cybersécurité en Télétravail",
+                cert_digitaliza: "Numérisez Entreprise avec Google Tools",
+                cert_apps: "Développement Apps Mobiles",
+                cert_sql: "Postgrade MS-SQL Server 2005",
+                cert_exchange: "Postgrade Exchange Server 2003",
+                cert_isa: "Postgrade ISA-Server 2004",
+                cert_ad: "Postgrade Active Directory",
+                cert_redes: "Postgrade Réseaux Windows 2003",
+                cert_hosts: "Postgrade Services Réseau",
+                cert_control: "Postgrade Contrôle Interne",
+                cert_lic: "Licence Mathématiques-Informatique",
+                proj1_desc: "Suite automatisation Pentesting avec CLI modulaire.",
+                proj1_hl1: "8 modules intégrés",
+                proj1_hl2: "Scan vulnérabilités web",
+                proj1_hl3: "Génération payloads avec msfvenom",
+                proj2_desc: "Système Dual Stealth/Attack avec confidentialité maximale.",
+                proj2_hl1: "Mode Stealth: Navigation anonyme via Tor",
+                proj2_hl2: "Mode Attack: Handler via réseau privé",
+                proj2_hl3: "AppArmor: Metasploit isolé",
+                proj3_desc: "Optimiseur CV avec IA locale et support multilingue.",
+                proj3_hl1: "IA locale pour points expérience",
+                proj3_hl2: "Détection automatique secteur",
+                proj3_hl3: "Sortie HTML pour ATS",
+                proj4_desc: "Plateforme cybersécurité avec base CVE à jour.",
+                proj4_hl1: "Base CVE à jour (2025-2026)",
+                proj4_hl2: "Structure modulaire",
+                proj4_hl3: "Installation automatisée",
+                contact_intro: "Disponible pour opportunités. Formulaire sécurisé",
                 contact_encrypted: "[chiffré de bout en bout]",
                 form_name: "$ nom:",
                 form_name_placeholder: "Votre nom complet",
                 form_email: "$ email:",
                 form_email_placeholder: "vous@email.com",
                 form_subject: "$ sujet:",
-                form_subject_placeholder: "Proposition de collaboration, Conseil, etc.",
+                form_subject_placeholder: "Proposition collaboration",
                 form_message: "$ message:",
-                form_message_placeholder: "Écrivez votre message ici...",
+                form_message_placeholder: "Votre message...",
                 form_submit: "$ envoyer_message --chiffré",
-                form_success: "✔ Message envoyé avec succès. Je répondrai bientôt.",
-                pgp: "Clé PGP disponible sur demande",
-                footer_design: "Design inspiré du terminal • Fait avec du code propre"
+                form_success: "✔ Message envoyé avec succès.",
+                pgp: "Clé PGP sur demande",
+                footer_design: "Design inspiré du terminal • Optimisé ATS"
             }
         };
 
@@ -1384,7 +1797,7 @@
             });
         }
 
-        // Manejo del formulario con Formspree
+        // Formulario
         const form = document.getElementById('contact-form');
         const successMsg = document.getElementById('form-success');
 
@@ -1406,20 +1819,20 @@
                     const msgs = {
                         es: 'Hubo un error. Intenta de nuevo.',
                         en: 'There was an error. Try again.',
-                        de: 'Es gab einen Fehler. Versuchen Sie es erneut.',
-                        it: "C'è stato un errore. Riprova.",
-                        fr: "Une erreur s'est produite. Réessayez."
+                        de: 'Es gab einen Fehler.',
+                        it: "C'è stato un errore.",
+                        fr: "Une erreur s'est produite."
                     };
                     alert(msgs[lang] || msgs.es);
                 }
             } catch (error) {
                 const lang = localStorage.getItem('portfolio-lang') || 'es';
                 const msgs = {
-                    es: 'Error de conexión. Verifica tu internet.',
-                    en: 'Connection error. Check your internet.',
-                    de: 'Verbindungsfehler. Überprüfen Sie Ihr Internet.',
-                    it: 'Errore di connessione. Controlla internet.',
-                    fr: 'Erreur de connexion. Vérifiez votre connexion.'
+                    es: 'Error de conexión.',
+                    en: 'Connection error.',
+                    de: 'Verbindungsfehler.',
+                    it: 'Errore di connessione.',
+                    fr: 'Erreur de connexion.'
                 };
                 alert(msgs[lang] || msgs.es);
             }
