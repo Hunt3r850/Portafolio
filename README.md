@@ -42,7 +42,6 @@ Portafolio/
 | EN | English | B2 |
 | DE | Deutsch | A1 |
 | IT | Italiano | B2 |
-| FR | Français | A1 |
 
 Funcionamiento del Sistema de Traducción
 
